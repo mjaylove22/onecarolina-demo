@@ -1,0 +1,533 @@
+<!--
+  ONE CAROLINA TRANSIT — Homepage prototype
+  =========================================
+  PLACEHOLDERS REQUIRING CLIENT CONFIRMATION BEFORE LAUNCH (see Phase 1 research):
+    - Business legal name ("Transit" vs "Transport")
+    - Phone number (two conflicting numbers found publicly)
+    - Street address (two conflicting addresses found publicly)
+    - Hours of operation
+    - Full service list / insurance types accepted
+    - United Way / VAN program partnership claim
+    - Testimonials (currently placeholder — remove before launch if not replaced with real quotes)
+    - Founding story / mission language
+    - Logo + brand photography
+  Every placeholder below is marked inline with an HTML comment.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>One Carolina Transit | Non-Emergency Medical Transportation in Camden & Kershaw County, SC</title>
+  <meta name="description" content="Safe, reliable non-emergency medical transportation for ambulatory and wheelchair patients in Camden, Cassatt, and Kershaw County, SC. Medicaid & Medicare rides available. Call today to book.">
+  <link rel="canonical" href="https://www.onecarolinatransit.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="One Carolina Transit | Non-Emergency Medical Transportation">
+  <meta property="og:description" content="Safe, reliable rides to medical appointments for ambulatory and wheelchair patients across Kershaw County, SC.">
+  <meta property="og:url" content="https://www.onecarolinatransit.com/">
+  <meta property="og:image" content="https://www.onecarolinatransit.com/assets/images/og-cover.jpg"> <!-- PLACEHOLDER: create real OG image -->
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Carolina Transit | Non-Emergency Medical Transportation">
+  <meta name="twitter:description" content="Safe, reliable rides to medical appointments for ambulatory and wheelchair patients across Kershaw County, SC.">
+
+  <!-- Fonts: Inter, self-hosted-preferred in production; using Google Fonts CDN for prototype -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN Play build — PROTOTYPE ONLY.
+       Production should compile Tailwind via CLI/PostCSS for real Lighthouse 95+ performance;
+       flagged again in the post-build recommendations. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
+            accent:  { 600: '#E8792E', 500: '#F28C42' },
+            success: { 600: '#3E8E5A' },
+            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <!-- Schema.org: LocalBusiness / MedicalTransportation -->
+  <!-- PLACEHOLDER DATA — phone, address, hours all need client confirmation before publishing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "One Carolina Transit",
+    "description": "Non-emergency medical transportation for ambulatory and wheelchair patients in Camden, Cassatt, and Kershaw County, South Carolina.",
+    "url": "https://www.onecarolinatransit.com/",
+    "telephone": "+1-803-000-0000",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[STREET ADDRESS — CONFIRM]",
+      "addressLocality": "Camden",
+      "addressRegion": "SC",
+      "postalCode": "29020",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Kershaw County, South Carolina"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+        "opens": "06:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "06:00",
+        "closes": "21:00"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo / wordmark -->
+        <a href="/" class="flex items-center gap-2" aria-label="One Carolina Transit — home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#1E4B8F"/>
+            <path d="M10 22.5V15a2 2 0 012-2h9l3 4v5.5a1.5 1.5 0 01-1.5 1.5h-1a2.5 2.5 0 01-5 0h-3a2.5 2.5 0 01-5 0h-1A1.5 1.5 0 0110 22.5z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="16" cy="24" r="1.5" fill="white"/>
+            <circle cx="21" cy="24" r="1.5" fill="white"/>
+          </svg>
+          <span class="font-bold text-lg text-primary-900 leading-tight">
+            One Carolina<br class="sm:hidden"> Transit
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
+          <a href="/about" class="text-neutral-900 hover:text-primary-700 font-medium">About</a>
+          <a href="/services" class="text-neutral-900 hover:text-primary-700 font-medium">Services</a>
+          <a href="/service-areas" class="text-neutral-900 hover:text-primary-700 font-medium">Service Areas</a>
+          <a href="/faq" class="text-neutral-900 hover:text-primary-700 font-medium">FAQ</a>
+          <a href="/contact" class="text-neutral-900 hover:text-primary-700 font-medium">Contact</a>
+        </nav>
+
+        <!-- Phone + CTA (always visible, never hidden behind hamburger) -->
+        <div class="flex items-center gap-3">
+          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+            <!-- PLACEHOLDER PHONE NUMBER — confirm before launch -->
+            <span>(803) 000-0000</span>
+          </a>
+          <a href="/request-a-ride" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+            Request a Ride
+          </a>
+
+          <!-- Mobile menu toggle -->
+          <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
+      <div class="px-4 py-4 flex flex-col gap-4">
+        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <span>(803) 000-0000</span>
+        </a>
+        <a href="/about" class="font-medium">About</a>
+        <a href="/services" class="font-medium">Services</a>
+        <a href="/service-areas" class="font-medium">Service Areas</a>
+        <a href="/faq" class="font-medium">FAQ</a>
+        <a href="/contact" class="font-medium">Contact</a>
+        <a href="/request-a-ride" class="inline-flex justify-center items-center bg-accent-600 text-white font-semibold px-6 py-3 rounded">
+          Request a Ride
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================= HERO ================= -->
+    <section class="relative overflow-hidden bg-primary-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-white">
+          <h1 class="text-[32px] leading-[1.2] sm:text-[40px] lg:text-[48px] font-bold mb-5">
+            Getting to your appointment shouldn't be the hard part.
+          </h1>
+          <p class="text-body-lg text-[18px] sm:text-[20px] text-neutral-100/90 mb-8 max-w-xl">
+            One Carolina Transit provides safe, dependable rides for ambulatory and wheelchair patients across Camden, Cassatt, and Kershaw County — with drivers you can trust and a team that shows up.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/request-a-ride" class="inline-flex justify-center items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[18px] px-8 py-4 rounded shadow-[0_4px_12px_rgba(232,121,46,0.35)] transition-colors">
+              Request a Ride
+            </a>
+            <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 border-2 border-white text-white font-semibold text-[18px] px-8 py-4 rounded transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+              Call (803) 000-0000
+            </a>
+          </div>
+        </div>
+
+        <!-- Signature visual: simple route illustration (pickup -> appointment), grounded in the transport subject rather than generic stock art -->
+        <div class="hidden lg:block" aria-hidden="true">
+          <svg viewBox="0 0 480 360" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 300 C 140 300, 140 180, 240 180 S 340 60, 440 60" stroke="#3B6BB0" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/>
+            <circle cx="40" cy="300" r="10" fill="#F28C42"/>
+            <circle cx="440" cy="60" r="10" fill="#3E8E5A"/>
+            <g transform="translate(210,150)">
+              <rect x="0" y="10" width="60" height="30" rx="8" fill="#FAF9F7"/>
+              <rect x="8" y="0" width="44" height="16" rx="6" fill="#FAF9F7"/>
+              <circle cx="14" cy="42" r="7" fill="#0F2E5C"/>
+              <circle cx="46" cy="42" r="7" fill="#0F2E5C"/>
+            </g>
+            <text x="20" y="330" fill="white" font-size="14" font-family="Inter, sans-serif">Pickup</text>
+            <text x="400" y="45" fill="white" font-size="14" font-family="Inter, sans-serif">Appointment</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST STRIP ================= -->
+    <section class="bg-white border-b border-neutral-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div class="reveal">
+          <p class="text-3xl font-bold text-primary-900">2016</p>
+          <p class="text-neutral-600 text-sm mt-1">Serving Kershaw County since</p>
+        </div>
+        <div class="reveal">
+          <p class="text-3xl font-bold text-primary-900">Medicaid<br>&amp; Medicare</p> <!-- PLACEHOLDER: confirm accepted payers -->
+          <p class="text-neutral-600 text-sm mt-1">Accepted</p>
+        </div>
+        <div class="reveal">
+          <p class="text-3xl font-bold text-primary-900">Wheelchair<br>Accessible</p>
+          <p class="text-neutral-600 text-sm mt-1">Vehicles available</p>
+        </div>
+        <div class="reveal">
+          <p class="text-3xl font-bold text-primary-900">Vetted</p>
+          <p class="text-neutral-600 text-sm mt-1">Trained, screened drivers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-12 reveal">
+          <h2 id="services-heading" class="text-[26px] sm:text-[32px] lg:text-[36px] font-bold text-primary-900 mb-4">
+            Transportation built around your needs
+          </h2>
+          <p class="text-neutral-600 text-lg">
+            Whatever your appointment, we'll get you there safely and on time.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service card -->
+          <div class="reveal bg-neutral-50 rounded-lg p-6 sm:p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded bg-primary-700/10 flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17V7a2 2 0 012-2h6l4 5v7a1 1 0 01-1 1H5a1 1 0 01-1-1z" stroke="#1E4B8F" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="18" r="1.6" fill="#1E4B8F"/><circle cx="16" cy="18" r="1.6" fill="#1E4B8F"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary-900 mb-2">Ambulatory Transport</h3>
+            <p class="text-neutral-600">Comfortable, door-to-door rides for patients who can walk or transfer with minimal assistance.</p>
+          </div>
+
+          <!-- Service card -->
+          <div class="reveal bg-neutral-50 rounded-lg p-6 sm:p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded bg-primary-700/10 flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="18" r="3" stroke="#1E4B8F" stroke-width="1.6"/><path d="M9 18V6h2m0 0h5l3 6h-3" stroke="#1E4B8F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary-900 mb-2">Wheelchair-Accessible Transport</h3>
+            <p class="text-neutral-600">Specially equipped vehicles and trained drivers for wheelchair users, with safety as the top priority.</p>
+          </div>
+
+          <!-- Service card -->
+          <div class="reveal bg-neutral-50 rounded-lg p-6 sm:p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)] hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded bg-primary-700/10 flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#1E4B8F" stroke-width="1.6"/><path d="M3 10h18M8 2v4M16 2v4" stroke="#1E4B8F" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary-900 mb-2">Scheduled Medical Appointments</h3>
+            <p class="text-neutral-600">Routine visits, dialysis, therapy, and specialist appointments — booked in advance so you're never left waiting. <!-- PLACEHOLDER: confirm which appointment types are actually supported --></p>
+          </div>
+        </div>
+
+        <div class="mt-10 reveal">
+          <a href="/services" class="text-primary-700 font-semibold hover:text-primary-900 inline-flex items-center gap-1">
+            View all services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="bg-neutral-100 py-16 lg:py-24" aria-labelledby="why-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal order-2 lg:order-1">
+          <h2 id="why-heading" class="text-[26px] sm:text-[32px] lg:text-[36px] font-bold text-primary-900 mb-6">
+            Why families in Kershaw County choose us
+          </h2>
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-success-600/10 flex items-center justify-center mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <p class="font-semibold text-neutral-900">Drivers you can trust</p>
+                <p class="text-neutral-600">Every driver is screened and trained before they ever pick up a passenger. <!-- PLACEHOLDER: confirm exact vetting process (background check type, certifications) --></p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-success-600/10 flex items-center justify-center mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <p class="font-semibold text-neutral-900">Locally owned, community-rooted</p>
+                <p class="text-neutral-600">We've served Kershaw County since 2016 — this is our home too.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-success-600/10 flex items-center justify-center mt-0.5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <p class="font-semibold text-neutral-900">Built for comfort, not just transport</p>
+                <p class="text-neutral-600">Wheelchair-accessible vehicles and drivers trained to help, not just drive.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2 reveal">
+          <div class="aspect-[4/3] rounded-xl bg-primary-700/10 flex items-center justify-center text-primary-700/40 text-sm">
+            <!-- PLACEHOLDER: replace with real vehicle/driver photography -->
+            [ Vehicle / driver photo placeholder ]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="how-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="how-heading" class="text-[26px] sm:text-[32px] lg:text-[36px] font-bold text-primary-900 mb-12 text-center reveal">
+          Booking a ride is simple
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-8">
+          <div class="reveal text-center">
+            <div class="w-14 h-14 rounded-full bg-primary-900 text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+            <h3 class="font-semibold text-lg mb-2">Request your ride</h3>
+            <p class="text-neutral-600">Call us or fill out our online form with your pickup, destination, and appointment time.</p>
+          </div>
+          <div class="reveal text-center">
+            <div class="w-14 h-14 rounded-full bg-primary-900 text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+            <h3 class="font-semibold text-lg mb-2">We confirm the details</h3>
+            <p class="text-neutral-600">Our team confirms your ride and lets you know exactly when to expect your driver.</p>
+          </div>
+          <div class="reveal text-center">
+            <div class="w-14 h-14 rounded-full bg-primary-900 text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+            <h3 class="font-semibold text-lg mb-2">We get you there</h3>
+            <p class="text-neutral-600">Your driver arrives on time and gets you safely to your appointment — and back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICE AREA TEASER ================= -->
+    <section class="bg-primary-900 py-16 lg:py-20" aria-labelledby="area-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="reveal text-white">
+          <h2 id="area-heading" class="text-[26px] sm:text-[32px] font-bold mb-4">Proudly serving Kershaw County</h2>
+          <p class="text-neutral-100/90 text-lg mb-6">
+            Based in Camden and Cassatt, we provide rides throughout Kershaw County. <!-- PLACEHOLDER: confirm exact towns/counties served -->
+          </p>
+          <a href="/service-areas" class="inline-flex items-center gap-2 bg-white text-primary-900 font-semibold px-6 py-3 rounded hover:bg-neutral-100 transition-colors">
+            See if we serve your area
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="reveal">
+          <div class="aspect-[4/3] rounded-xl bg-white/10 flex items-center justify-center text-white/50 text-sm">
+            [ Service area map placeholder ]
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS (placeholder state) ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="testimonials-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="testimonials-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-4 text-center reveal">
+          What riders are saying
+        </h2>
+        <p class="text-center text-neutral-600 mb-12 reveal">
+          <!-- PLACEHOLDER SECTION: no verified testimonials available yet. Replace with real, permission-cleared quotes before launch. -->
+          Real reviews from our riders — coming soon.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="reveal bg-neutral-100 rounded-lg p-6 border-2 border-dashed border-neutral-300">
+            <p class="text-neutral-600 italic">[ Testimonial placeholder — add a real, permission-cleared quote here ]</p>
+            <p class="mt-4 font-semibold text-neutral-900">— Name, City</p>
+          </div>
+          <div class="reveal bg-neutral-100 rounded-lg p-6 border-2 border-dashed border-neutral-300">
+            <p class="text-neutral-600 italic">[ Testimonial placeholder — add a real, permission-cleared quote here ]</p>
+            <p class="mt-4 font-semibold text-neutral-900">— Name, City</p>
+          </div>
+          <div class="reveal bg-neutral-100 rounded-lg p-6 border-2 border-dashed border-neutral-300">
+            <p class="text-neutral-600 italic">[ Testimonial placeholder — add a real, permission-cleared quote here ]</p>
+            <p class="mt-4 font-semibold text-neutral-900">— Name, City</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ PREVIEW ================= -->
+    <section class="bg-neutral-100 py-16 lg:py-24" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="faq-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-10 text-center reveal">
+          Common questions
+        </h2>
+
+        <div class="space-y-4 reveal">
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-1">
+                Do you accept Medicaid or Medicare?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-1" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm exact insurance/payer details with owner -->
+              We work with Medicaid and Medicare patients. Call us and we'll help confirm your specific coverage.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-2">
+                What areas do you serve?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-2" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm full service area list -->
+              We're based in Camden and Cassatt and serve Kershaw County. Visit our Service Areas page for details, or call to confirm we cover your town.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-3">
+                How far in advance should I book?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-3" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm actual booking lead time policy -->
+              We recommend booking as early as possible. Call us and we'll do our best to accommodate your schedule.
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center reveal">
+          <a href="/faq" class="text-primary-700 font-semibold hover:text-primary-900">View all FAQs →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA BANNER ================= -->
+    <section class="bg-accent-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Ready to book your ride?</h2>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/request-a-ride" class="inline-flex justify-center items-center bg-white text-accent-600 font-semibold text-lg px-8 py-4 rounded hover:bg-neutral-50 transition-colors">
+            Request a Ride
+          </a>
+          <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">
+            Call (803) 000-0000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary-900 text-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <p class="font-bold text-lg mb-2">One Carolina Transit</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Quick Links</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/services" class="hover:text-white">Services</a></li>
+          <li><a href="/faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="/request-a-ride" class="hover:text-white">Request a Ride</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Service Areas</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <!-- PLACEHOLDER: confirm full town list -->
+          <li>Camden, SC</li>
+          <li>Cassatt, SC</li>
+          <li>Kershaw County, SC</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Contact</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li><!-- PLACEHOLDER ADDRESS --> [Street Address], Camden, SC 29020</li>
+          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
+          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
+          <li>Thu: 6:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-neutral-100/60 text-sm">
+      © <span id="year"></span> One Carolina Transit, LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

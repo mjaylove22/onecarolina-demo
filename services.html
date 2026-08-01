@@ -1,0 +1,297 @@
+<!--
+  ONE CAROLINA TRANSIT — Services page
+  PLACEHOLDERS REQUIRING CLIENT CONFIRMATION:
+    - Full confirmed service list (dialysis, long-distance, non-medical errands — currently unconfirmed)
+    - Insurance/payer types accepted beyond Medicaid/Medicare
+    - Booking process specifics (lead time required, cancellation policy)
+    - Phone/address (same as other pages)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | One Carolina Transit — Ambulatory & Wheelchair Transportation</title>
+  <meta name="description" content="Ambulatory and wheelchair-accessible non-emergency medical transportation in Camden, Cassatt, and Kershaw County, SC. Medicaid & Medicare accepted. See our full service list.">
+  <link rel="canonical" href="https://www.onecarolinatransit.com/services">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Services | One Carolina Transit">
+  <meta property="og:description" content="Ambulatory and wheelchair-accessible medical transportation across Kershaw County, SC.">
+  <meta property="og:url" content="https://www.onecarolinatransit.com/services">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
+            accent:  { 600: '#E8792E', 500: '#F28C42' },
+            success: { 600: '#3E8E5A' },
+            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.onecarolinatransit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.onecarolinatransit.com/services" }
+    ]
+  }
+  </script>
+
+  <!-- Service schema for the two confirmed core offerings -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Non-Emergency Medical Transportation",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "One Carolina Transit"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Kershaw County, South Carolina"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Transportation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ambulatory Transport" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheelchair-Accessible Transport" } }
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER (shared pattern) ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-2" aria-label="One Carolina Transit — home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#1E4B8F"/>
+            <path d="M10 22.5V15a2 2 0 012-2h9l3 4v5.5a1.5 1.5 0 01-1.5 1.5h-1a2.5 2.5 0 01-5 0h-3a2.5 2.5 0 01-5 0h-1A1.5 1.5 0 0110 22.5z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="16" cy="24" r="1.5" fill="white"/>
+            <circle cx="21" cy="24" r="1.5" fill="white"/>
+          </svg>
+          <span class="font-bold text-lg text-primary-900 leading-tight">One Carolina<br class="sm:hidden"> Transit</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
+          <a href="/about" class="text-neutral-900 hover:text-primary-700 font-medium">About</a>
+          <a href="/services" class="text-primary-700 font-medium border-b-2 border-primary-700 pb-1" aria-current="page">Services</a>
+          <a href="/service-areas" class="text-neutral-900 hover:text-primary-700 font-medium">Service Areas</a>
+          <a href="/faq" class="text-neutral-900 hover:text-primary-700 font-medium">FAQ</a>
+          <a href="/contact" class="text-neutral-900 hover:text-primary-700 font-medium">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>(803) 000-0000</span>
+          </a>
+          <a href="/request-a-ride" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+            Request a Ride
+          </a>
+          <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
+      <div class="px-4 py-4 flex flex-col gap-4">
+        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>(803) 000-0000</span>
+        </a>
+        <a href="/about" class="font-medium">About</a>
+        <a href="/services" class="font-medium text-primary-700">Services</a>
+        <a href="/service-areas" class="font-medium">Service Areas</a>
+        <a href="/faq" class="font-medium">FAQ</a>
+        <a href="/contact" class="font-medium">Contact</a>
+        <a href="/request-a-ride" class="inline-flex justify-center items-center bg-accent-600 text-white font-semibold px-6 py-3 rounded">Request a Ride</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="bg-primary-900 py-14 lg:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <p class="text-accent-500 font-semibold mb-3">Our Services</p>
+        <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">
+          Transportation for whatever your appointment calls for
+        </h1>
+        <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
+          From routine checkups to specialized care, we provide safe, dependable rides across Kershaw County.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CORE SERVICES ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="core-services-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="core-services-heading" class="sr-only">Core services</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Ambulatory -->
+          <div class="reveal bg-white rounded-lg p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <div class="w-14 h-14 rounded bg-primary-700/10 flex items-center justify-center mb-5">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17V7a2 2 0 012-2h6l4 5v7a1 1 0 01-1 1H5a1 1 0 01-1-1z" stroke="#1E4B8F" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="18" r="1.6" fill="#1E4B8F"/><circle cx="16" cy="18" r="1.6" fill="#1E4B8F"/></svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary-900 mb-3">Ambulatory Transport</h3>
+            <p class="text-neutral-600 mb-4 leading-relaxed">
+              Comfortable, door-to-door rides for patients who can walk or transfer with minimal assistance. Our drivers help you from your door to the vehicle and into your appointment.
+            </p>
+            <ul class="space-y-2 text-neutral-600 text-sm">
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Door-to-door pickup and drop-off</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Assistance in and out of the vehicle</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Round-trip or one-way booking</li>
+            </ul>
+          </div>
+
+          <!-- Wheelchair -->
+          <div class="reveal bg-white rounded-lg p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <div class="w-14 h-14 rounded bg-primary-700/10 flex items-center justify-center mb-5">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="18" r="3" stroke="#1E4B8F" stroke-width="1.6"/><path d="M9 18V6h2m0 0h5l3 6h-3" stroke="#1E4B8F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-primary-900 mb-3">Wheelchair-Accessible Transport</h3>
+            <p class="text-neutral-600 mb-4 leading-relaxed">
+              Specially equipped vehicles and drivers trained to safely secure and transport wheelchair users, with safety as the top priority every step of the way.
+            </p>
+            <ul class="space-y-2 text-neutral-600 text-sm">
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Wheelchair-accessible vehicles</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Trained in safe wheelchair securement</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Patient, respectful assistance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional services — clearly marked as unconfirmed -->
+        <div class="reveal bg-neutral-100 border-2 border-dashed border-neutral-300 rounded-lg p-8">
+          <h3 class="text-xl font-semibold text-primary-900 mb-3">Additional services</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            <!-- PLACEHOLDER: this whole block needs confirmation — do not publish as-is -->
+            One Carolina Transit may also support recurring treatments (such as dialysis), longer-distance appointments outside Kershaw County, and non-medical trips. <strong>These offerings are not yet confirmed</strong> and should be verified with the owner before publishing — remove any service listed here that isn't actually offered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INSURANCE / PAYERS ================= -->
+    <section class="bg-neutral-100 py-16 lg:py-24" aria-labelledby="insurance-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="insurance-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-6 reveal">
+          Insurance &amp; payment
+        </h2>
+        <p class="text-neutral-600 text-lg mb-8 reveal">
+          <!-- PLACEHOLDER: confirm full list of accepted payers/insurance plans, and whether private-pay is offered -->
+          We work with Medicaid and Medicare patients. If you're unsure whether your coverage applies, call us and we'll help you figure it out.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 reveal">
+          <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.06)] font-medium text-primary-900">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Medicaid
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.06)] font-medium text-primary-900">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="#3E8E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Medicare
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.06)] font-medium text-neutral-400 border-2 border-dashed border-neutral-300">
+            Private pay? <!-- PLACEHOLDER: confirm -->
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING PROCESS SUMMARY ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="booking-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="booking-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-6 reveal">
+          Ready to book?
+        </h2>
+        <p class="text-neutral-600 text-lg mb-8 reveal">
+          Call us directly or submit a ride request online, and our team will confirm the details with you.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+          <a href="/request-a-ride" class="inline-flex justify-center items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-lg px-8 py-4 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+            Request a Ride
+          </a>
+          <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 border-2 border-primary-700 text-primary-700 font-semibold text-lg px-8 py-4 rounded hover:bg-primary-700 hover:text-white transition-colors">
+            Call (803) 000-0000
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER (shared pattern) ================= -->
+  <footer class="bg-primary-900 text-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <p class="font-bold text-lg mb-2">One Carolina Transit</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Quick Links</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/services" class="hover:text-white">Services</a></li>
+          <li><a href="/faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="/request-a-ride" class="hover:text-white">Request a Ride</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Service Areas</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>Camden, SC</li>
+          <li>Cassatt, SC</li>
+          <li>Kershaw County, SC</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Contact</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>[Street Address], Camden, SC 29020</li>
+          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
+          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
+          <li>Thu: 6:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-neutral-100/60 text-sm">
+      © <span id="year"></span> One Carolina Transit, LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
