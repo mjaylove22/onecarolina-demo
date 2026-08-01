@@ -1,0 +1,256 @@
+
+
+Contact · HTML
+<!--
+  ONE CAROLINA TRANSIT — Contact page
+  PLACEHOLDERS: phone, address, hours (see CLIENT-QUESTIONS.md).
+  FORM NOTE: the <form> below has no working backend yet — action/method are placeholders.
+  Needs a real submission handler (e.g., Formspree, a serverless function, or a CRM webhook)
+  before this goes live. Flagged again in the Phase 8 performance/launch-readiness pass.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Contact Us | One Carolina Transit — Camden & Kershaw County, SC</title>
+  <meta name="description" content="Get in touch with One Carolina Transit for questions about non-emergency medical transportation in Camden, Cassatt, and Kershaw County, SC.">
+  <link rel="canonical" href="https://www.onecarolinatransit.com/contact">
+ 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | One Carolina Transit">
+  <meta property="og:description" content="Reach One Carolina Transit for questions about medical transportation in Kershaw County, SC.">
+  <meta property="og:url" content="https://www.onecarolinatransit.com/contact">
+  <meta property="og:locale" content="en_US">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
+            accent:  { 600: '#E8792E', 500: '#F28C42' },
+            success: { 600: '#3E8E5A' },
+            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
+        },
+      },
+    };
+  </script>
+ 
+  <link rel="stylesheet" href="assets/css/custom.css">
+ 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.onecarolinatransit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.onecarolinatransit.com/contact" }
+    ]
+  }
+  </script>
+</head>
+ 
+<body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+ 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+ 
+  <!-- ================= HEADER (shared pattern) ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="One Carolina Transit — home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#1E4B8F"/>
+            <path d="M10 22.5V15a2 2 0 012-2h9l3 4v5.5a1.5 1.5 0 01-1.5 1.5h-1a2.5 2.5 0 01-5 0h-3a2.5 2.5 0 01-5 0h-1A1.5 1.5 0 0110 22.5z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="16" cy="24" r="1.5" fill="white"/>
+            <circle cx="21" cy="24" r="1.5" fill="white"/>
+          </svg>
+          <span class="font-bold text-lg text-primary-900 leading-tight">One Carolina<br class="sm:hidden"> Transit</span>
+        </a>
+ 
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
+          <a href="about.html" class="text-neutral-900 hover:text-primary-700 font-medium">About</a>
+          <a href="services.html" class="text-neutral-900 hover:text-primary-700 font-medium">Services</a>
+          <a href="service-areas.html" class="text-neutral-900 hover:text-primary-700 font-medium">Service Areas</a>
+          <a href="faq.html" class="text-neutral-900 hover:text-primary-700 font-medium">FAQ</a>
+          <a href="contact.html" class="text-primary-700 font-medium border-b-2 border-primary-700 pb-1" aria-current="page">Contact</a>
+        </nav>
+ 
+        <div class="flex items-center gap-3">
+          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>(803) 000-0000</span>
+          </a>
+          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+            Request a Ride
+          </a>
+          <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+ 
+    <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
+      <div class="px-4 py-4 flex flex-col gap-4">
+        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>(803) 000-0000</span>
+        </a>
+        <a href="about.html" class="font-medium">About</a>
+        <a href="services.html" class="font-medium">Services</a>
+        <a href="service-areas.html" class="font-medium">Service Areas</a>
+        <a href="faq.html" class="font-medium">FAQ</a>
+        <a href="contact.html" class="font-medium text-primary-700">Contact</a>
+        <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-accent-600 text-white font-semibold px-6 py-3 rounded">Request a Ride</a>
+      </div>
+    </nav>
+  </header>
+ 
+  <main id="main-content">
+ 
+    <!-- ================= PAGE HERO ================= -->
+    <section class="bg-primary-900 py-14 lg:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <p class="text-accent-500 font-semibold mb-3">Contact Us</p>
+        <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">We're here to help</h1>
+        <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
+          Have a question, or want to talk with our team before booking? Reach out below.
+        </p>
+      </div>
+    </section>
+ 
+    <!-- Redirect callout for ride-specific visitors -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+      <div class="reveal bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <p class="text-neutral-700">Looking to book a ride instead?</p>
+        <a href="request-a-ride.html" class="inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold px-5 py-2.5 rounded transition-colors whitespace-nowrap">
+          Go to Request a Ride
+        </a>
+      </div>
+    </div>
+ 
+    <!-- ================= CONTACT FORM + INFO ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="contact-heading">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-5 gap-12">
+ 
+        <!-- Form -->
+        <div class="lg:col-span-3 reveal">
+          <h2 id="contact-heading" class="text-[24px] sm:text-[28px] font-bold text-primary-900 mb-6">Send us a message</h2>
+ 
+          <!-- NOTE: action/method are placeholders — needs real backend before launch -->
+          <form action="#" method="POST" class="space-y-5" novalidate>
+            <div>
+              <label for="name" class="block font-medium text-neutral-900 mb-1.5">Full name <span class="text-accent-600" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required aria-required="true"
+                class="w-full min-h-[48px] px-4 rounded border-[1.5px] border-neutral-300 focus:border-primary-700 focus:outline-none">
+            </div>
+ 
+            <div>
+              <label for="phone" class="block font-medium text-neutral-900 mb-1.5">Phone number <span class="text-accent-600" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" required aria-required="true"
+                class="w-full min-h-[48px] px-4 rounded border-[1.5px] border-neutral-300 focus:border-primary-700 focus:outline-none">
+            </div>
+ 
+            <div>
+              <label for="email" class="block font-medium text-neutral-900 mb-1.5">Email (optional)</label>
+              <input type="email" id="email" name="email"
+                class="w-full min-h-[48px] px-4 rounded border-[1.5px] border-neutral-300 focus:border-primary-700 focus:outline-none">
+            </div>
+ 
+            <div>
+              <label for="message" class="block font-medium text-neutral-900 mb-1.5">Message <span class="text-accent-600" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required aria-required="true"
+                class="w-full px-4 py-3 rounded border-[1.5px] border-neutral-300 focus:border-primary-700 focus:outline-none"></textarea>
+            </div>
+ 
+            <button type="submit"
+              class="inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-lg px-8 py-4 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+              Send Message
+            </button>
+          </form>
+        </div>
+ 
+        <!-- Info card -->
+        <div class="lg:col-span-2 reveal">
+          <div class="bg-neutral-100 rounded-lg p-8 space-y-6">
+            <div>
+              <p class="font-semibold text-primary-900 mb-1">Phone</p>
+              <a href="tel:+18030000000" class="text-neutral-700 hover:text-primary-700">(803) 000-0000</a> <!-- PLACEHOLDER -->
+            </div>
+            <div>
+              <p class="font-semibold text-primary-900 mb-1">Address</p>
+              <p class="text-neutral-700">[Street Address], Camden, SC 29020</p> <!-- PLACEHOLDER -->
+            </div>
+            <div>
+              <p class="font-semibold text-primary-900 mb-1">Hours</p>
+              <p class="text-neutral-700">Mon–Wed, Fri: 6:00 AM–6:00 PM</p>
+              <p class="text-neutral-700">Thu: 6:00 AM–9:00 PM</p> <!-- PLACEHOLDER: confirm accuracy -->
+            </div>
+          </div>
+ 
+          <div class="mt-6 aspect-[4/3] rounded-xl bg-primary-700/10 flex items-center justify-center text-primary-700/40 text-sm text-center p-4">
+            <!-- PLACEHOLDER: replace with real embedded map once address is confirmed -->
+            [ Map placeholder ]
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+ 
+  <!-- ================= FOOTER (shared pattern) ================= -->
+  <footer class="bg-primary-900 text-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <p class="font-bold text-lg mb-2">One Carolina Transit</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Quick Links</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="services.html" class="hover:text-white">Services</a></li>
+          <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+          <li><a href="request-a-ride.html" class="hover:text-white">Request a Ride</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Service Areas</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>Camden, SC</li>
+          <li>Cassatt, SC</li>
+          <li>Kershaw County, SC</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Contact</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>[Street Address], Camden, SC 29020</li>
+          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
+          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
+          <li>Thu: 6:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-neutral-100/60 text-sm">
+      © <span id="year"></span> One Carolina Transit, LLC. All rights reserved.
+    </div>
+  </footer>
+ 
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+ 
+
+

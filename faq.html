@@ -1,0 +1,327 @@
+<!--
+  ONE CAROLINA TRANSIT — FAQ page
+  PLACEHOLDERS REQUIRING CLIENT CONFIRMATION: insurance details, service area, booking lead time,
+  cancellation policy, pricing/billing explanation — see CLIENT-QUESTIONS.md for the full list.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQ | One Carolina Transit — Non-Emergency Medical Transportation</title>
+  <meta name="description" content="Answers to common questions about One Carolina Transit's non-emergency medical transportation services in Camden and Kershaw County, SC — insurance, service area, booking, and more.">
+  <link rel="canonical" href="https://www.onecarolinatransit.com/faq">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ | One Carolina Transit">
+  <meta property="og:description" content="Common questions about booking a ride with One Carolina Transit.">
+  <meta property="og:url" content="https://www.onecarolinatransit.com/faq">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
+            accent:  { 600: '#E8792E', 500: '#F28C42' },
+            success: { 600: '#3E8E5A' },
+            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.onecarolinatransit.com/" },
+      { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.onecarolinatransit.com/faq" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage schema — mirrors the visible Q&A content exactly, per SEO best practice -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you accept Medicaid or Medicare?",
+        "acceptedAnswer": { "@type": "Answer", "text": "One Carolina Transit works with Medicaid and Medicare patients. If you're unsure whether your specific plan is covered, call us and we'll help confirm your coverage before booking." }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We're based in Camden and Cassatt, South Carolina, and serve communities throughout Kershaw County. Call us to confirm coverage for your specific address." }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance do I need to book a ride?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We recommend booking as early as possible once you know your appointment time. Call us and we'll do our best to accommodate your schedule, including short-notice requests when possible." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you transport wheelchair users?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have wheelchair-accessible vehicles and drivers trained in safe wheelchair securement and assistance." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I need to cancel or reschedule my ride?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Call us as soon as you know your appointment has changed, and we'll help you reschedule or cancel your ride." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer rides for non-medical trips?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Our primary focus is medical appointment transportation. Call us to ask about other trip types." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a ride cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For Medicaid and Medicare patients, rides are typically billed through your insurance or transportation benefit. Call us to discuss your specific situation and any applicable cost." }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= HEADER (shared pattern) ================= -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="One Carolina Transit — home">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#1E4B8F"/>
+            <path d="M10 22.5V15a2 2 0 012-2h9l3 4v5.5a1.5 1.5 0 01-1.5 1.5h-1a2.5 2.5 0 01-5 0h-3a2.5 2.5 0 01-5 0h-1A1.5 1.5 0 0110 22.5z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="16" cy="24" r="1.5" fill="white"/>
+            <circle cx="21" cy="24" r="1.5" fill="white"/>
+          </svg>
+          <span class="font-bold text-lg text-primary-900 leading-tight">One Carolina<br class="sm:hidden"> Transit</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
+          <a href="about.html" class="text-neutral-900 hover:text-primary-700 font-medium">About</a>
+          <a href="services.html" class="text-neutral-900 hover:text-primary-700 font-medium">Services</a>
+          <a href="service-areas.html" class="text-neutral-900 hover:text-primary-700 font-medium">Service Areas</a>
+          <a href="faq.html" class="text-primary-700 font-medium border-b-2 border-primary-700 pb-1" aria-current="page">FAQ</a>
+          <a href="contact.html" class="text-neutral-900 hover:text-primary-700 font-medium">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>(803) 000-0000</span>
+          </a>
+          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+            Request a Ride
+          </a>
+          <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
+      <div class="px-4 py-4 flex flex-col gap-4">
+        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <span>(803) 000-0000</span>
+        </a>
+        <a href="about.html" class="font-medium">About</a>
+        <a href="services.html" class="font-medium">Services</a>
+        <a href="service-areas.html" class="font-medium">Service Areas</a>
+        <a href="faq.html" class="font-medium text-primary-700">FAQ</a>
+        <a href="contact.html" class="font-medium">Contact</a>
+        <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-accent-600 text-white font-semibold px-6 py-3 rounded">Request a Ride</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="bg-primary-900 py-14 lg:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <p class="text-accent-500 font-semibold mb-3">FAQ</p>
+        <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">Common questions</h1>
+        <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
+          Don't see your question here? Call us — we're happy to help.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= FULL FAQ ACCORDION ================= -->
+    <section class="py-16 lg:py-24" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="faq-heading" class="sr-only">Frequently asked questions</h2>
+
+        <div class="space-y-4 reveal">
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-1">
+                Do you accept Medicaid or Medicare?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-1" class="hidden px-6 pb-5 text-neutral-600">
+              One Carolina Transit works with Medicaid and Medicare patients. <!-- PLACEHOLDER: confirm private-pay availability --> If you're unsure whether your specific plan is covered, call us and we'll help confirm your coverage before booking.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-2">
+                What areas do you serve?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-2" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: full town list unconfirmed, see /service-areas -->
+              We're based in Camden and Cassatt, South Carolina, and serve communities throughout Kershaw County. Visit our <a href="service-areas.html" class="text-primary-700 underline">Service Areas page</a> or call to confirm coverage for your specific address.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-3">
+                How far in advance do I need to book a ride?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-3" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm real lead-time policy -->
+              We recommend booking as early as possible once you know your appointment time. Call us and we'll do our best to accommodate your schedule, including short-notice requests when possible.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-4">
+                Do you transport wheelchair users?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-4" class="hidden px-6 pb-5 text-neutral-600">
+              Yes. We have wheelchair-accessible vehicles and drivers trained in safe wheelchair securement and assistance.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-5">
+                What if I need to cancel or reschedule my ride?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-5" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm real cancellation policy / notice period -->
+              Call us as soon as you know your appointment has changed, and we'll help you reschedule or cancel your ride.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-6">
+                Do you offer rides for non-medical trips?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-6" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm whether non-medical trips are offered at all -->
+              Our primary focus is medical appointment transportation. Call us to ask about other trip types.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-7">
+                How much does a ride cost?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-7" class="hidden px-6 pb-5 text-neutral-600">
+              <!-- PLACEHOLDER: confirm actual billing/pricing explanation -->
+              For Medicaid and Medicare patients, rides are typically billed through your insurance or transportation benefit. Call us to discuss your specific situation and any applicable cost.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="bg-accent-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Still have questions?</h2>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="contact.html" class="inline-flex justify-center items-center bg-white text-accent-600 font-semibold text-lg px-8 py-4 rounded hover:bg-neutral-50 transition-colors">Contact Us</a>
+          <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 000-0000</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER (shared pattern) ================= -->
+  <footer class="bg-primary-900 text-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <p class="font-bold text-lg mb-2">One Carolina Transit</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Quick Links</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="services.html" class="hover:text-white">Services</a></li>
+          <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+          <li><a href="request-a-ride.html" class="hover:text-white">Request a Ride</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Service Areas</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>Camden, SC</li>
+          <li>Cassatt, SC</li>
+          <li>Kershaw County, SC</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Contact</p>
+        <ul class="space-y-2 text-neutral-100/80 text-sm">
+          <li>[Street Address], Camden, SC 29020</li>
+          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
+          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
+          <li>Thu: 6:00 AM–9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-neutral-100/60 text-sm">
+      © <span id="year"></span> One Carolina Transit, LLC. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
