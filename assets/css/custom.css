@@ -8,10 +8,6 @@
   --color-accent-600: #E8792E;
 }
 
-.hidden {
-  display: none !important;
-}
-
 html {
   scroll-behavior: smooth;
 }

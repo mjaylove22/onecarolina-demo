@@ -1,10 +1,7 @@
 <!--
   ONE CAROLINA TRANSIT — Service Areas page
-  PLACEHOLDERS REQUIRING CLIENT CONFIRMATION:
-    - Exact list of towns/areas served (Camden and Cassatt are confirmed via public address records;
-      the rest of the Kershaw County town list below is a reasonable geographic inference, NOT confirmed)
-    - Whether service extends outside Kershaw County (e.g., to Columbia — referenced once in a public review, unconfirmed as standard practice)
-    - Phone/address (same as other pages)
+  Updated with confirmed 7-county service area from the owner — see CLIENT-QUESTIONS.md.
+  OPEN ITEM: which two additional states the multi-state operating authority covers.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,13 +9,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Service Areas | One Carolina Transit — Kershaw County, SC</title>
-  <meta name="description" content="One Carolina Transit provides non-emergency medical transportation throughout Kershaw County, SC, including Camden and Cassatt. See if we serve your area.">
+  <title>Service Areas | One Carolina Transit — South Carolina</title>
+  <meta name="description" content="One Carolina Transit provides non-emergency medical transportation across Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
   <link rel="canonical" href="https://www.onecarolinatransit.com/service-areas">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Service Areas | One Carolina Transit">
-  <meta property="og:description" content="Serving Camden, Cassatt, and Kershaw County, SC.">
+  <meta property="og:description" content="Serving Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
   <meta property="og:url" content="https://www.onecarolinatransit.com/service-areas">
   <meta property="og:locale" content="en_US">
 
@@ -26,23 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
-            accent:  { 600: '#E8792E', 500: '#F28C42' },
-            success: { 600: '#3E8E5A' },
-            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <link rel="stylesheet" href="assets/css/custom.css">
 
@@ -85,11 +66,11 @@
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+          <a href="tel:+18035498920" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            <span>(803) 000-0000</span>
+            <span>(803) 549-8920</span>
           </a>
-          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(37,99,235,0.25)] transition-colors">
             Request a Ride
           </a>
           <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
@@ -101,9 +82,9 @@
 
     <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
       <div class="px-4 py-4 flex flex-col gap-4">
-        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+        <a href="tel:+18035498920" class="flex items-center gap-2 text-primary-900 font-semibold">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <span>(803) 000-0000</span>
+          <span>(803) 549-8920</span>
         </a>
         <a href="about.html" class="font-medium">About</a>
         <a href="services.html" class="font-medium">Services</a>
@@ -122,10 +103,10 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <p class="text-accent-500 font-semibold mb-3">Service Areas</p>
         <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">
-          Proudly serving Kershaw County, SC
+          Serving seven South Carolina counties
         </h1>
         <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
-          Based in Camden and Cassatt, we provide reliable rides throughout the county. Not sure if we cover your area? Just give us a call.
+          Based in Camden, we provide reliable rides across Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties. Not sure if we cover your area? Just give us a call.
         </p>
       </div>
     </section>
@@ -136,35 +117,34 @@
 
         <div class="reveal">
           <div class="aspect-[4/3] rounded-xl bg-primary-700/10 flex items-center justify-center text-primary-700/40 text-sm text-center p-4">
-            <!-- PLACEHOLDER: replace with a real embedded map or custom service-area graphic -->
-            [ Kershaw County service area map placeholder ]
+            <!-- TODO: replace with a real embedded map or custom service-area graphic -->
+            [ Service area map placeholder — 7 SC counties ]
           </div>
         </div>
 
         <div class="reveal">
           <h2 id="areas-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-4">Where we drive</h2>
           <p class="text-neutral-600 text-lg mb-6 leading-relaxed">
-            Our home base is Camden and Cassatt, and we serve communities throughout Kershaw County. If your town isn't listed below, call us — we may still be able to help.
+            Based out of Camden, SC, we serve seven counties across the state — and we're licensed to operate across three states as needed.
           </p>
 
-          <div class="border-2 border-dashed border-neutral-300 rounded-lg p-6 bg-neutral-100 mb-6">
-            <p class="text-sm text-neutral-600 mb-3 font-semibold">⚠ Unconfirmed list — verify before publishing</p>
+          <div class="rounded-lg p-6 bg-neutral-100 mb-6">
             <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-neutral-700">
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Camden</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Cassatt</span>
-              <span class="flex items-center gap-2 text-neutral-400"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#9CA3AF" stroke-width="1.6"/></svg> Bethune (confirm)</span>
-              <span class="flex items-center gap-2 text-neutral-400"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#9CA3AF" stroke-width="1.6"/></svg> Elgin (confirm)</span>
-              <span class="flex items-center gap-2 text-neutral-400"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#9CA3AF" stroke-width="1.6"/></svg> Lugoff (confirm)</span>
-              <span class="flex items-center gap-2 text-neutral-400"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#9CA3AF" stroke-width="1.6"/></svg> Ridgeway (confirm)</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Kershaw County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Richland County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Lexington County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Sumter County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Orangeburg County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Bamberg County</span>
+              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Lancaster County</span>
             </div>
           </div>
 
           <p class="text-neutral-600 leading-relaxed mb-6">
-            <!-- PLACEHOLDER: confirm whether trips outside Kershaw County (e.g., to Columbia specialists) are standard offerings or exceptions -->
-            Need a ride to an appointment outside the county — for example, a specialist visit in Columbia? Call us to check availability.
+            Traveling outside these counties? Call us — with multi-state operating authority, we may still be able to help.
           </p>
 
-          <a href="tel:+18030000000" class="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-900 text-white font-semibold px-6 py-3 rounded transition-colors">
+          <a href="tel:+18035498920" class="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-900 text-white font-semibold px-6 py-3 rounded transition-colors">
             Call to confirm your area
           </a>
         </div>
@@ -177,7 +157,7 @@
         <h2 class="text-2xl sm:text-3xl font-bold text-white">We're ready when you are</h2>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-white text-accent-600 font-semibold text-lg px-8 py-4 rounded hover:bg-neutral-50 transition-colors">Request a Ride</a>
-          <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 000-0000</a>
+          <a href="tel:+18035498920" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 549-8920</a>
         </div>
       </div>
     </section>
@@ -188,7 +168,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
         <p class="font-bold text-lg mb-2">One Carolina Transit</p>
-        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation across South Carolina.</p>
       </div>
       <div>
         <p class="font-semibold mb-3">Quick Links</p>
@@ -202,18 +182,21 @@
       <div>
         <p class="font-semibold mb-3">Service Areas</p>
         <ul class="space-y-2 text-neutral-100/80 text-sm">
-          <li>Camden, SC</li>
-          <li>Cassatt, SC</li>
-          <li>Kershaw County, SC</li>
+          <li>Kershaw County</li>
+          <li>Richland County</li>
+          <li>Lexington County</li>
+          <li>Sumter County</li>
+          <li>Orangeburg County</li>
+          <li>Bamberg County</li>
+          <li>Lancaster County</li>
         </ul>
       </div>
       <div>
         <p class="font-semibold mb-3">Contact</p>
         <ul class="space-y-2 text-neutral-100/80 text-sm">
-          <li>[Street Address], Camden, SC 29020</li>
-          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
-          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
-          <li>Thu: 6:00 AM–9:00 PM</li>
+          <li>402-H Dicey Ford Rd, Camden, SC 29020</li>
+          <li><a href="tel:+18035498920" class="hover:text-white">(803) 549-8920</a></li>
+          <li>Daily: 6:00 AM – 6:00 PM</li>
         </ul>
       </div>
     </div>

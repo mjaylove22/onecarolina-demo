@@ -1,11 +1,9 @@
 <!--
   ONE CAROLINA TRANSIT — About page
-  PLACEHOLDERS REQUIRING CLIENT CONFIRMATION:
-    - Founding story / mission language (currently a reasonable inference from public facts, not invented specifics)
-    - Owner name/photo permission (Corey Sweetenburg, per public LinkedIn/PSC records — confirm before publishing name+photo)
-    - Driver vetting/training specifics (background check type, certifications)
-    - United Way / VAN program partnership — confirm current relationship before publishing
-    - Phone, address (same placeholders as homepage)
+  UPDATED with confirmed info from owner (Corey Sweetenburg) — see /CLIENT-QUESTIONS.md.
+  REMAINING OPEN ITEMS:
+    - Founding story / mission language still generic — owner hasn't provided specific wording
+    - Which two additional states the multi-state operating authority covers
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,13 +11,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About Us | One Carolina Transit — Camden & Kershaw County, SC</title>
-  <meta name="description" content="Learn about One Carolina Transit, a locally owned non-emergency medical transportation provider serving Camden, Cassatt, and Kershaw County, SC since 2016.">
+  <title>About Us | One Carolina Transit — South Carolina</title>
+  <meta name="description" content="Learn about One Carolina Transit, a locally owned non-emergency medical transportation provider serving Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
   <link rel="canonical" href="https://www.onecarolinatransit.com/about">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="About One Carolina Transit">
-  <meta property="og:description" content="Locally owned non-emergency medical transportation serving Kershaw County, SC since 2016.">
+  <meta property="og:description" content="Locally owned non-emergency medical transportation serving South Carolina.">
   <meta property="og:url" content="https://www.onecarolinatransit.com/about">
   <meta property="og:locale" content="en_US">
 
@@ -27,23 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { 900: '#0F2E5C', 700: '#1E4B8F', 500: '#3B6BB0' },
-            accent:  { 600: '#E8792E', 500: '#F28C42' },
-            success: { 600: '#3E8E5A' },
-            neutral: { 50: '#FAF9F7', 100: '#F2F0EC', 300: '#D6D3CC', 600: '#5B5B5B', 900: '#1A1A1A' },
-          },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          borderRadius: { sm: '8px', DEFAULT: '12px', lg: '16px', xl: '24px' },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <link rel="stylesheet" href="assets/css/custom.css">
 
@@ -87,11 +69,11 @@
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="tel:+18030000000" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
+          <a href="tel:+18035498920" class="hidden sm:flex items-center gap-2 text-primary-900 font-semibold hover:text-primary-700">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            <span>(803) 000-0000</span>
+            <span>(803) 549-8920</span>
           </a>
-          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(232,121,46,0.25)] transition-colors">
+          <a href="request-a-ride.html" class="hidden sm:inline-flex items-center bg-accent-600 hover:bg-accent-500 text-white font-semibold text-[17px] px-6 py-3 rounded shadow-[0_4px_12px_rgba(37,99,235,0.25)] transition-colors">
             Request a Ride
           </a>
           <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2 rounded text-primary-900" aria-label="Open menu">
@@ -103,9 +85,9 @@
 
     <nav id="mobile-menu" class="lg:hidden hidden overflow-hidden bg-white border-t border-neutral-100" aria-label="Mobile">
       <div class="px-4 py-4 flex flex-col gap-4">
-        <a href="tel:+18030000000" class="flex items-center gap-2 text-primary-900 font-semibold">
+        <a href="tel:+18035498920" class="flex items-center gap-2 text-primary-900 font-semibold">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <span>(803) 000-0000</span>
+          <span>(803) 549-8920</span>
         </a>
         <a href="about.html" class="font-medium text-primary-700">About</a>
         <a href="services.html" class="font-medium">Services</a>
@@ -127,8 +109,8 @@
           A local team, committed to getting you there safely
         </h1>
         <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
-          <!-- PLACEHOLDER: replace with confirmed founding story once owner responds -->
-          Since 2016, we've provided dependable transportation to Medicaid and Medicare patients across Kershaw County — because getting to your appointment shouldn't be a barrier to your care.
+          <!-- TODO: add founding year/story once the owner confirms it -->
+          We provide dependable, private-pay transportation across South Carolina — because getting to your appointment shouldn't be a barrier to your care.
         </p>
       </div>
     </section>
@@ -138,7 +120,7 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
         <h2 id="mission-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-6">Our mission</h2>
         <p class="text-neutral-600 text-lg leading-relaxed mb-4">
-          <!-- PLACEHOLDER: this is inferred from public claims, not a confirmed mission statement — replace with the owner's own words -->
+          <!-- TODO: inferred from public claims, not a confirmed mission statement — replace with the owner's own words -->
           We believe reliable transportation is part of good healthcare, not separate from it. Every ride we provide is built around one principle: never compromise a patient's safety to save time or money.
         </p>
         <p class="text-neutral-600 text-lg leading-relaxed">
@@ -159,14 +141,13 @@
             loading="lazy"
             class="aspect-square w-full rounded-xl object-cover shadow-[0_2px_8px_rgba(0,0,0,0.06)]"
           >
-          <!-- PLACEHOLDER: confirm exact title (Owner? CEO? Owner/President, per earlier public filing?) -->
         </div>
         <div class="lg:col-span-2 reveal">
           <h2 id="leadership-heading" class="text-[24px] sm:text-[28px] font-bold text-primary-900 mb-4">Locally owned and operated</h2>
-          <p class="font-semibold text-primary-900 mb-1">Corey Sweetenburg, Owner &amp; CEO</p>
-          <!-- PLACEHOLDER: confirm exact title wording and bio copy with the owner -->
+          <p class="font-semibold text-primary-900 mb-1">Corey Sweetenburg, Owner, Chief Executive Officer</p>
+          <!-- TODO: bio copy below is generic — replace with the owner's own words -->
           <p class="text-neutral-600 text-lg leading-relaxed">
-            One Carolina Transit is a locally owned and operated business, founded to fill a real gap in reliable transportation for Kershaw County residents. Leadership is hands-on and directly involved in day-to-day operations.
+            One Carolina Transit is a locally owned and operated business, founded to fill a real gap in reliable transportation for the communities we serve. Leadership is hands-on and directly involved in day-to-day operations.
           </p>
         </div>
       </div>
@@ -184,14 +165,14 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke="#3E8E5A" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </div>
             <h3 class="font-semibold text-lg mb-2">Background screened</h3>
-            <p class="text-neutral-600 text-sm"><!-- PLACEHOLDER: confirm exact screening process --> Every driver goes through a background screening before joining our team.</p>
+            <p class="text-neutral-600 text-sm">Every driver passes a national/federal criminal background check, a sex offender registry check, a 10-panel drug screen, and a 10-year driving record review.</p>
           </div>
           <div class="reveal bg-neutral-50 rounded-lg p-6 shadow-[0_2px_8px_rgba(0,0,0,0.06)] text-center">
             <div class="w-12 h-12 rounded-full bg-success-600/10 flex items-center justify-center mx-auto mb-4">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="#3E8E5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 13l3 3 5-6" stroke="#3E8E5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3 class="font-semibold text-lg mb-2">Trained for patient care</h3>
-            <p class="text-neutral-600 text-sm"><!-- PLACEHOLDER: confirm specific training/certifications (CPR, defensive driving, etc.) --> Drivers are trained specifically to assist ambulatory and wheelchair patients safely.</p>
+            <p class="text-neutral-600 text-sm">Drivers are CPR-certified and trained in defensive driving and wheelchair assistance.</p>
           </div>
           <div class="reveal bg-neutral-50 rounded-lg p-6 shadow-[0_2px_8px_rgba(0,0,0,0.06)] text-center">
             <div class="w-12 h-12 rounded-full bg-success-600/10 flex items-center justify-center mx-auto mb-4">
@@ -204,21 +185,18 @@
       </div>
     </section>
 
-    <!-- ================= COMMUNITY INVOLVEMENT ================= -->
+    <!-- ================= LICENSING ================= -->
     <section class="bg-neutral-100 py-16 lg:py-24" aria-labelledby="community-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
         <h2 id="community-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-6">
-          Rooted in Kershaw County
+          Licensed and regulated
         </h2>
         <p class="text-neutral-600 text-lg leading-relaxed">
-          <!-- PLACEHOLDER: publish only once the owner confirms current relationship with United Way's VAN program -->
-          We've worked alongside local organizations to help expand access to reliable transportation across Kershaw County — because a ride to your appointment shouldn't depend on your zip code.
-        </p>
-        <p class="text-sm text-neutral-500 mt-4 italic">
-          <!-- Internal note, not for publish: verify United Way / SWRTA VAN program relationship before making any partnership claim public. -->
+          One Carolina Transit is licensed with the South Carolina Office of Regulatory Staff (ORS) and holds Public Service Commission Certification #9156-A. We're licensed to operate across three states as needed. <!-- TODO: confirm which two states in addition to SC -->
         </p>
       </div>
     </section>
+
 
     <!-- ================= CTA BANNER ================= -->
     <section class="bg-accent-600">
@@ -226,7 +204,7 @@
         <h2 class="text-2xl sm:text-3xl font-bold text-white">Ready to book your ride?</h2>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-white text-accent-600 font-semibold text-lg px-8 py-4 rounded hover:bg-neutral-50 transition-colors">Request a Ride</a>
-          <a href="tel:+18030000000" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 000-0000</a>
+          <a href="tel:+18035498920" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 549-8920</a>
         </div>
       </div>
     </section>
@@ -237,7 +215,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
         <p class="font-bold text-lg mb-2">One Carolina Transit</p>
-        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation for Kershaw County, SC.</p>
+        <p class="text-neutral-100/70 text-sm">Safe, reliable non-emergency medical transportation across South Carolina.</p>
       </div>
       <div>
         <p class="font-semibold mb-3">Quick Links</p>
@@ -251,18 +229,21 @@
       <div>
         <p class="font-semibold mb-3">Service Areas</p>
         <ul class="space-y-2 text-neutral-100/80 text-sm">
-          <li>Camden, SC</li>
-          <li>Cassatt, SC</li>
-          <li>Kershaw County, SC</li>
+          <li>Kershaw County</li>
+          <li>Richland County</li>
+          <li>Lexington County</li>
+          <li>Sumter County</li>
+          <li>Orangeburg County</li>
+          <li>Bamberg County</li>
+          <li>Lancaster County</li>
         </ul>
       </div>
       <div>
         <p class="font-semibold mb-3">Contact</p>
         <ul class="space-y-2 text-neutral-100/80 text-sm">
-          <li>[Street Address], Camden, SC 29020</li>
-          <li><a href="tel:+18030000000" class="hover:text-white">(803) 000-0000</a></li>
-          <li>Mon–Wed, Fri: 6:00 AM–6:00 PM</li>
-          <li>Thu: 6:00 AM–9:00 PM</li>
+          <li>402-H Dicey Ford Rd, Camden, SC 29020</li>
+          <li><a href="tel:+18035498920" class="hover:text-white">(803) 549-8920</a></li>
+          <li>Daily: 6:00 AM – 6:00 PM</li>
         </ul>
       </div>
     </div>

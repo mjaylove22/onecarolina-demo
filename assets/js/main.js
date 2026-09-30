@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initFaqAccordion();
+  initFareCalculator();
 });
 
 /* ---------- Mobile navigation ---------- */
@@ -78,5 +79,35 @@ function initFaqAccordion() {
       trigger.setAttribute('aria-expanded', String(!expanded));
       if (panel) panel.classList.toggle('hidden', expanded);
     });
+  });
+}
+
+/* ---------- Fare calculator (Request a Ride page) ---------- */
+/* Pricing per owner: $10 loading fee + $1.25/mile, calculated round trip. */
+function initFareCalculator() {
+  const btn = document.getElementById('fare-calc-btn');
+  const input = document.getElementById('fare-miles');
+  const result = document.getElementById('fare-result');
+  if (!btn || !input || !result) return;
+
+  const LOADING_FEE = 10;
+  const PER_MILE = 1.25;
+
+  function calculate() {
+    const miles = parseFloat(input.value);
+    if (isNaN(miles) || miles < 0) {
+      result.textContent = 'Enter a valid round-trip mileage to see an estimate.';
+      return;
+    }
+    const fare = LOADING_FEE + PER_MILE * miles;
+    result.textContent = 'Estimated fare: $' + fare.toFixed(2);
+  }
+
+  btn.addEventListener('click', calculate);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      calculate();
+    }
   });
 }
