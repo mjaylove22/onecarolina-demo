@@ -41,6 +41,8 @@ GitHub Pages at `mjaylove22.github.io/onecarolina-demo`.
   registry check, 10-panel drug screen, 10-year driving record review,
   CPR certified, defensive driving + wheelchair training
 - Legal name: One Carolina Transit, LLC (footers already say this)
+- Email: carolinatransit03@gmail.com (confirmed). Phone on site: (803) 549-8920 only
+  (owner's 549-4946 number intentionally not listed)
 - Mailing address (NOT shown on site — asking client if it should be public):
   1832 Red Hill Church Rd, Cassatt, SC 29032
 - Ride requests are monitored by the Supervisor and Office Manager
@@ -97,12 +99,23 @@ GitHub Pages at `mjaylove22.github.io/onecarolina-demo`.
     follow-up questions (founding year, correct email, second phone, mailing
     address visibility, appointment types)
 
+17. **Payment page:** new `pay.html` ("How to Pay") + `assets/js/payment-config.js`
+    + `assets/js/pay.js`. Shows only real, validated Zelle / Cash App / Square
+    values; falls back to "call us" while blank. Linked from the footer of every
+    page, the Services payment section and the request form. Tested in headless
+    Chromium (valid, malformed and hostile values; copy button; mobile).
+18. Owner reports lots of cash riders on Orangeburg -> Aiken. Aiken County is not
+    in the confirmed service area — client question added; site makes no Aiken claim.
+
 ## Known open items (not yet done)
 - **Forms still have no backend.** Both `<form action="#">` tags don't submit
   anywhere. Netlify Forms once hosting moves (or Formspree as an interim) — see
   `DEV-NOTES.md`
-- Payments are manual (office confirms by phone). Real Zelle handle, Cash App
-  $cashtag, Square link still needed from the owner (never fabricate these).
+- Payments are manual (office confirms by phone). `pay.html` is built; it goes
+  live when the owner's real Zelle / Cash App / Square values are entered in
+  `assets/js/payment-config.js` (never fabricate these).
+- Decide whether to add Aiken County (and other regular destinations) to the
+  service area — waiting on the client
   Square is removed from the form dropdown/FAQ until his account is live.
 - Which 2 additional states (beyond SC) the multi-state authority covers
 - Real logo (currently an inline SVG mark), real vehicle/driver/office photos
@@ -110,8 +123,8 @@ GitHub Pages at `mjaylove22.github.io/onecarolina-demo`.
 - Visible placeholder boxes: homepage photo + map, contact map, service-areas map
   (contact page map can be embedded now — address is confirmed)
 - `og-cover.jpg` share image doesn't exist yet
-- Real domain + hosting migration; business email (confirm correct address —
-  client's signature has a typo)
+- Real domain + hosting migration; business email (public address is
+  carolinatransit03@gmail.com; not shown on the site yet)
 - **Git sync:** the GitHub repo (`mjaylove22/onecarolina-demo`) was last committed
   Aug 1 and did not have the session-1 work. Copy this folder's contents over the
   local repo and commit/push so the demo URL matches this code.

@@ -8,7 +8,7 @@ The items under STILL NEEDED are the last pieces before the site can be finalize
 **Business Info**
 1. Legal name: One Carolina Transit, LLC ✓
 2. Title: Owner, Chief Executive Officer ✓
-3. Phone: (803) 549-8920 (for appointments) ✓
+3. Phone: (803) 549-8920 (for appointments) — this is the only number listed on the site ✓
 4. Physical address: 402-H Dicey Ford Rd, Camden, SC 29020 ✓
 5. Hours: Daily, 6:00 AM – 6:00 PM ✓
 
@@ -46,11 +46,15 @@ The items under STILL NEEDED are the last pieces before the site can be finalize
 
 **Business details to confirm**
 - Founding year — an earlier draft said "since 2016"; that has been removed from the site because it was never confirmed. What year was One Carolina Transit started (if you'd like it shown)?
-- Public email address — your message shows both carolinatransit03@gmail.com and carolinatrasnsit03@gmail.com. Which is correct?
-- Phone numbers — the site lists (803) 549-8920. Your signature also lists 1-803-549-4946. Should that number appear on the site too?
 - Mailing address (1832 Red Hill Church Rd, Cassatt, SC 29032) — should this be shown publicly, or is 402-H Dicey Ford Rd the only address to display?
 - Which two additional states (beyond SC) does your operating authority cover?
+- **Aiken:** you mentioned many cash riders going from Orangeburg to Aiken. Aiken County is not one of the seven counties listed on the site. Should Aiken County be added (as a pickup area, a destination, or both)? Are there other regular destinations outside the seven counties (for example Columbia, Augusta) we should mention?
 - Which types of medical appointments do you transport to (for example, dialysis, therapy, specialists)? The site currently just says "medical appointments."
+
+**Ride requests and payment flow**
+- What email address(es) should new ride requests go to (Supervisor and Office Manager)?
+- After you confirm a ride by phone, how long does the rider have to send payment before the booking is dropped?
+- How will the 25% cancellation reimbursement be sent back to the rider, and who handles it?
 
 **Brand & Photos**
 22. Logo — existing file to send, or design from scratch?
@@ -60,7 +64,9 @@ The items under STILL NEEDED are the last pieces before the site can be finalize
 25. How quickly are ride requests answered once the form goes live (e.g., same day, within 2 hours)?
 26. Insurance riders currently select "I have insurance — please call me" on the form. Is that the right handoff, or should it route differently?
 
-**Payment Setup (needed before the form can take payments)**
-- Zelle handle (phone or email) to publish
-- Cash App $cashtag
-- Square link, once set up
+**Payment Setup — the "How to Pay" page (pay.html) is built and only needs these three values**
+- Zelle: the email or phone number registered with Zelle
+- Cash App: the $cashtag
+- Square: a Square payment link, once your account is set up (lets riders pay by card with no app — handy for riders who don't use Zelle or Cash App)
+- If possible, please use business accounts (Zelle through your business bank account, a Cash App business account) so rider payments stay separate from personal funds — your bank or accountant can advise.
+  Note: these values will be public on the website.

@@ -1,7 +1,6 @@
 <!--
-  ONE CAROLINA TRANSIT — Service Areas page
-  Updated with confirmed 7-county service area from the owner — see CLIENT-QUESTIONS.md.
-  OPEN ITEM: which two additional states the multi-state operating authority covers.
+  ONE CAROLINA TRANSIT — How to pay
+  Payment options render from assets/js/payment-config.js (real values come from the owner; leave blank to hide).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,14 +8,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Service Areas | One Carolina Transit — South Carolina</title>
-  <meta name="description" content="One Carolina Transit provides non-emergency medical transportation across Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
-  <link rel="canonical" href="https://www.onecarolinatransit.com/service-areas">
+  <title>How to Pay for Your Ride | One Carolina Transit</title>
+  <meta name="description" content="How to pay for your One Carolina Transit ride. Private-pay riders: full payment is required to complete your booking. Call (803) 549-8920 with questions.">
+  <link rel="canonical" href="https://www.onecarolinatransit.com/pay">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Service Areas | One Carolina Transit">
-  <meta property="og:description" content="Serving Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
-  <meta property="og:url" content="https://www.onecarolinatransit.com/service-areas">
+  <meta property="og:title" content="How to Pay for Your Ride | One Carolina Transit">
+  <meta property="og:description" content="Private-pay riders: how to send full payment for your ride.">
+  <meta property="og:url" content="https://www.onecarolinatransit.com/pay">
   <meta property="og:locale" content="en_US">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +32,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.onecarolinatransit.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.onecarolinatransit.com/service-areas" }
+      { "@type": "ListItem", "position": 2, "name": "How to Pay", "item": "https://www.onecarolinatransit.com/pay" }
     ]
   }
   </script>
@@ -60,7 +59,7 @@
         <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
           <a href="about.html" class="text-neutral-900 hover:text-primary-700 font-medium">About</a>
           <a href="services.html" class="text-neutral-900 hover:text-primary-700 font-medium">Services</a>
-          <a href="service-areas.html" class="text-primary-700 font-medium border-b-2 border-primary-700 pb-1" aria-current="page">Service Areas</a>
+          <a href="service-areas.html" class="text-neutral-900 hover:text-primary-700 font-medium">Service Areas</a>
           <a href="faq.html" class="text-neutral-900 hover:text-primary-700 font-medium">FAQ</a>
           <a href="contact.html" class="text-neutral-900 hover:text-primary-700 font-medium">Contact</a>
         </nav>
@@ -88,7 +87,7 @@
         </a>
         <a href="about.html" class="font-medium">About</a>
         <a href="services.html" class="font-medium">Services</a>
-        <a href="service-areas.html" class="font-medium text-primary-700">Service Areas</a>
+        <a href="service-areas.html" class="font-medium">Service Areas</a>
         <a href="faq.html" class="font-medium">FAQ</a>
         <a href="contact.html" class="font-medium">Contact</a>
         <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-accent-600 text-white font-semibold px-6 py-3 rounded">Request a Ride</a>
@@ -101,66 +100,76 @@
     <!-- ================= PAGE HERO ================= -->
     <section class="bg-primary-900 py-14 lg:py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <p class="text-accent-500 font-semibold mb-3">Service Areas</p>
-        <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">
-          Serving seven South Carolina counties
-        </h1>
+        <p class="text-accent-500 font-semibold mb-3">Payment</p>
+        <h1 class="text-[32px] sm:text-[40px] font-bold mb-4">How to pay for your ride</h1>
         <p class="text-neutral-100/90 text-lg max-w-2xl mx-auto">
-          Based in Camden, we provide reliable rides across Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties. Not sure if we cover your area? Just give us a call.
+          Full payment is required to complete your booking. No insurance needed &mdash; most of our riders pay privately.
         </p>
       </div>
     </section>
 
-    <!-- ================= MAP + TOWN LIST ================= -->
-    <section class="py-16 lg:py-24" aria-labelledby="areas-heading">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
-
-        <div class="reveal">
-          <div class="aspect-[4/3] rounded-xl bg-primary-700/10 flex items-center justify-center text-primary-700/40 text-sm text-center p-4">
-            <!-- TODO: replace with a real embedded map or custom service-area graphic -->
-            [ Service area map placeholder — 7 SC counties ]
-          </div>
-        </div>
-
-        <div class="reveal">
-          <h2 id="areas-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-4">Where we drive</h2>
-          <p class="text-neutral-600 text-lg mb-6 leading-relaxed">
-            Based out of Camden, SC, we serve seven counties across the state — and we're licensed to operate across three states as needed.
-          </p>
-
-          <div class="rounded-lg p-6 bg-neutral-100 mb-6">
-            <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-neutral-700">
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Kershaw County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Richland County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Lexington County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Sumter County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Orangeburg County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Bamberg County</span>
-              <span class="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 5 5.5 5 9.5c0 5.5 7 12.5 7 12.5s7-7 7-12.5C19 5.5 16 2 12 2z" stroke="#1E4B8F" stroke-width="1.6"/></svg> Lancaster County</span>
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="py-16 lg:py-20" aria-labelledby="steps-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="steps-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-8">Before you send payment</h2>
+        <ol class="space-y-6">
+          <li class="flex gap-4">
+            <span class="flex-none w-9 h-9 rounded-full bg-primary-900 text-white font-bold flex items-center justify-center" aria-hidden="true">1</span>
+            <div>
+              <h3 class="font-bold text-primary-900 mb-1">Request your ride at least 72 hours ahead</h3>
+              <p class="text-neutral-600">Use the <a href="request-a-ride.html" class="text-primary-700 font-semibold underline">request form</a> or call <a href="tel:+18035498920" class="text-primary-700 font-semibold underline">(803) 549-8920</a>.</p>
             </div>
-          </div>
-
-          <p class="text-neutral-600 leading-relaxed mb-6">
-            Traveling outside these counties? Call us — with multi-state operating authority, we may still be able to help.
-          </p>
-
-          <a href="tel:+18035498920" class="inline-flex items-center gap-2 bg-primary-700 hover:bg-primary-900 text-white font-semibold px-6 py-3 rounded transition-colors">
-            Call to confirm your area
-          </a>
-        </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="flex-none w-9 h-9 rounded-full bg-primary-900 text-white font-bold flex items-center justify-center" aria-hidden="true">2</span>
+            <div>
+              <h3 class="font-bold text-primary-900 mb-1">We call to confirm your details and your total</h3>
+              <p class="text-neutral-600">Pricing is a $10 loading fee plus $1.25 per mile, calculated round trip. Wait for our confirmation so you send the right amount &mdash; the <a href="request-a-ride.html" class="text-primary-700 font-semibold underline">fare estimator</a> gives you a quick idea beforehand.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="flex-none w-9 h-9 rounded-full bg-primary-900 text-white font-bold flex items-center justify-center" aria-hidden="true">3</span>
+            <div>
+              <h3 class="font-bold text-primary-900 mb-1">Send full payment</h3>
+              <p class="text-neutral-600">Choose an option below and include your name and ride date so we can match it to your booking.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ================= CTA BANNER ================= -->
-    <section class="bg-accent-600">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white">We're ready when you are</h2>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="request-a-ride.html" class="inline-flex justify-center items-center bg-white text-accent-600 font-semibold text-lg px-8 py-4 rounded hover:bg-neutral-50 transition-colors">Request a Ride</a>
-          <a href="tel:+18035498920" class="inline-flex justify-center items-center gap-2 border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded hover:bg-white/10 transition-colors">Call (803) 549-8920</a>
+    <!-- ================= WAYS TO PAY ================= -->
+    <section class="bg-neutral-100 py-16 lg:py-20" aria-labelledby="methods-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="methods-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-8">Ways to pay</h2>
+
+        <!-- Filled in by assets/js/pay.js from assets/js/payment-config.js -->
+        <div id="pay-methods" class="hidden grid gap-5 sm:grid-cols-2"></div>
+
+        <!-- Shown until at least one real payment method is configured (and if JavaScript is off) -->
+        <div id="pay-fallback" class="bg-white rounded-lg p-6 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+          <p class="text-neutral-900 font-semibold mb-2">We&rsquo;ll share payment details when we confirm your ride.</p>
+          <p class="text-neutral-600 mb-4">Call us and we&rsquo;ll walk you through it.</p>
+          <a href="tel:+18035498920" class="inline-flex items-center justify-center min-h-[48px] px-5 rounded font-semibold bg-accent-600 hover:bg-accent-500 text-white transition-colors">Call (803) 549-8920</a>
         </div>
+
+        <p id="pay-status" class="sr-only" role="status" aria-live="polite"></p>
       </div>
     </section>
+
+    <!-- ================= GOOD TO KNOW ================= -->
+    <section class="py-16 lg:py-20" aria-labelledby="know-heading">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="know-heading" class="text-[26px] sm:text-[32px] font-bold text-primary-900 mb-6">Good to know</h2>
+        <ul class="space-y-3 text-neutral-600 text-lg">
+          <li>Rides must be requested at least 72 hours in advance.</li>
+          <li>Cancellations made 24 or more hours ahead receive a 25% reimbursement.</li>
+          <li>Going farther than our usual counties? Trips outside our seven-county service area are handled case by case &mdash; <a href="tel:+18035498920" class="text-primary-700 font-semibold underline">call us</a> to ask.</li>
+          <li>Have insurance? Your dispatcher or broker arranges coverage directly.</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <!-- ================= FOOTER (shared pattern) ================= -->
@@ -207,6 +216,8 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/payment-config.js"></script>
+  <script src="assets/js/pay.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
