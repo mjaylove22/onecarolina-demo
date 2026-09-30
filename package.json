@@ -1,0 +1,13 @@
+{
+  "name": "one-carolina-transit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One Carolina Transit marketing site (static HTML + compiled Tailwind)",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i assets/css/input.css -o assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i assets/css/input.css -o assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
