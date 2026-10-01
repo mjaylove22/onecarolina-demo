@@ -83,7 +83,7 @@ function initFaqAccordion() {
 }
 
 /* ---------- Fare calculator (Request a Ride page) ---------- */
-/* Pricing per owner: $10 loading fee + $1.25/mile, calculated round trip. */
+/* Pricing per owner: $10 loading fee + $1.85/mile, calculated round trip. */
 function initFareCalculator() {
   const btn = document.getElementById('fare-calc-btn');
   const input = document.getElementById('fare-miles');
@@ -91,7 +91,7 @@ function initFareCalculator() {
   if (!btn || !input || !result) return;
 
   const LOADING_FEE = 10;
-  const PER_MILE = 1.25;
+  const PER_MILE = 1.85;
 
   function calculate() {
     const miles = parseFloat(input.value);

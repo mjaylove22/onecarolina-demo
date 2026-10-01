@@ -1,9 +1,8 @@
 <!--
   ONE CAROLINA TRANSIT — Contact page
   Phone, address and hours confirmed by the owner (see CLIENT-QUESTIONS.md).
-  FORM NOTE: the <form> below has no working backend yet — action/method are placeholders.
-  Needs a real submission handler (e.g., Formspree, a serverless function, or a CRM webhook)
-  before this goes live. Flagged again in the Phase 8 performance/launch-readiness pass.
+  FORM NOTE: the form below submits to Formspree via assets/js/forms.js. Recipients are set in
+  the Formspree dashboard (never in this repo).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Contact Us | One Carolina Transit — South Carolina</title>
-  <meta name="description" content="Get in touch with One Carolina Transit for questions about non-emergency medical transportation in Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
+  <meta name="description" content="Get in touch with One Carolina Transit for questions about non-emergency medical transportation in Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, Lancaster, Aiken, Lee, and Chesterfield counties, SC.">
   <link rel="canonical" href="https://www.onecarolinatransit.com/contact">
 
   <meta property="og:type" content="website">
@@ -129,8 +128,9 @@
         <div class="lg:col-span-3 reveal">
           <h2 id="contact-heading" class="text-[24px] sm:text-[28px] font-bold text-primary-900 mb-6">Send us a message</h2>
 
-          <!-- NOTE: action/method are placeholders — needs real backend before launch -->
-          <form action="#" method="POST" class="space-y-5" novalidate>
+          <form action="https://formspree.io/f/xaenzzop" method="POST" class="space-y-5" data-ajax-form
+            data-success="Thank you. Your message was received and our team will get back to you.">
+            <input type="hidden" name="_subject" value="New website message — One Carolina Transit">
             <div>
               <label for="name" class="block font-medium text-neutral-900 mb-1.5">Full name <span class="text-accent-600" aria-hidden="true">*</span></label>
               <input type="text" id="name" name="name" required aria-required="true"
@@ -215,6 +215,9 @@
           <li>Orangeburg County</li>
           <li>Bamberg County</li>
           <li>Lancaster County</li>
+          <li>Aiken County</li>
+          <li>Lee County</li>
+          <li>Chesterfield County</li>
         </ul>
       </div>
       <div>
@@ -232,6 +235,7 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

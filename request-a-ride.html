@@ -1,8 +1,8 @@
 <!--
   ONE CAROLINA TRANSIT — Request a Ride page (primary conversion page)
-  FORM NOTE: no working backend yet — action/method are placeholders. Needs a real
-  submission handler before launch. Also needs an owner decision on whether insurance
-  info is collected here or discussed by phone (see CLIENT-QUESTIONS.md, section 7).
+  FORM NOTE: submits to Formspree via assets/js/forms.js (recipients set in the Formspree
+  dashboard, never in this repo). Decided: insurance riders call the Office Manager
+  instead of using this form (see DEV-NOTES.md).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Request a Ride | One Carolina Transit — South Carolina</title>
-  <meta name="description" content="Book a non-emergency medical transportation ride with One Carolina Transit. Ambulatory and wheelchair-accessible rides in Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties, SC.">
+  <meta name="description" content="Book a non-emergency medical transportation ride with One Carolina Transit. Ambulatory and wheelchair-accessible rides in Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, Lancaster, Aiken, Lee, and Chesterfield counties, SC.">
   <link rel="canonical" href="https://www.onecarolinatransit.com/request-a-ride">
 
   <meta property="og:type" content="website">
@@ -130,7 +130,7 @@
             <p class="font-semibold text-primary-900 mb-3">What happens after you submit</p>
             <ol class="space-y-3 text-neutral-600 text-sm">
               <li class="flex gap-3"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-700 text-white text-xs font-bold flex items-center justify-center">1</span> Our Supervisor or Office Manager reviews your request</li>
-              <li class="flex gap-3"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-700 text-white text-xs font-bold flex items-center justify-center">2</span> We call you to confirm details and payment</li>
+              <li class="flex gap-3"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-700 text-white text-xs font-bold flex items-center justify-center">2</span> We respond within 12 hours with your trip approval, and you can pay at that point</li>
               <li class="flex gap-3"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary-700 text-white text-xs font-bold flex items-center justify-center">3</span> Your driver arrives on time, ready to help</li>
             </ol>
             <p class="text-sm text-neutral-500 mt-4 pt-4 border-t border-neutral-200">Rides require at least 72 hours' notice, and full payment to complete booking.</p>
@@ -138,7 +138,7 @@
 
           <div class="bg-white border-2 border-primary-700 rounded-lg p-6 mt-6">
             <p class="font-semibold text-primary-900 mb-1">Estimate your fare</p>
-            <p class="text-sm text-neutral-600 mb-4">$10 loading fee + $1.25/mile, calculated round trip.</p>
+            <p class="text-sm text-neutral-600 mb-4">$10 loading fee + $1.85/mile, calculated round trip.</p>
             <label for="fare-miles" class="block text-sm font-medium text-neutral-900 mb-1.5">Round-trip mileage</label>
             <div class="flex gap-2">
               <input type="number" id="fare-miles" min="0" step="0.1" inputmode="decimal" placeholder="e.g. 80"
@@ -157,8 +157,10 @@
         <div class="order-2 lg:order-1 lg:col-span-3 reveal">
           <h2 id="request-heading" class="text-[24px] sm:text-[28px] font-bold text-primary-900 mb-6">Request your ride</h2>
 
-          <!-- NOTE: action/method are placeholders — needs real backend before launch -->
-          <form action="#" method="POST" class="space-y-5" novalidate>
+          <!-- Submits to Formspree (assets/js/forms.js). Recipients are set in the Formspree dashboard, not here. -->
+          <form action="https://formspree.io/f/xaenzzop" method="POST" class="space-y-5" data-ajax-form
+            data-success="Thank you. Your ride request was received. Our team will review it and respond within 12 hours to approve your ride. Payment is made after approval.">
+            <input type="hidden" name="_subject" value="New ride request — One Carolina Transit">
 
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
@@ -220,9 +222,9 @@
                 <option value="zelle">Zelle</option>
                 <option value="cashapp">Cash App</option>
                 <!-- TODO: re-add <option value="square">Square</option> once the owner's Square account is live -->
-                <option value="insurance">I have insurance — please have someone call me</option>
+                <option value="insurance">I have insurance — I will call (803) 549-8920</option>
               </select>
-              <p class="text-sm text-neutral-500 mt-1.5">Full payment is required to complete booking. Insurance clients: your dispatcher or broker arranges coverage directly. <a href="pay.html" class="text-primary-700 underline">How payment works</a></p>
+              <p class="text-sm text-neutral-500 mt-1.5">Full payment is required to complete booking. Insurance clients: please call our Office Manager, Florene Davis, at <a href="tel:+18035498920" class="text-primary-700 underline">(803) 549-8920</a>. <a href="pay.html" class="text-primary-700 underline">How payment works</a></p>
             </div>
 
             <div>
@@ -269,6 +271,9 @@
           <li>Orangeburg County</li>
           <li>Bamberg County</li>
           <li>Lancaster County</li>
+          <li>Aiken County</li>
+          <li>Lee County</li>
+          <li>Chesterfield County</li>
         </ul>
       </div>
       <div>
@@ -286,6 +291,7 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
