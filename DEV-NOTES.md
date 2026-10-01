@@ -8,7 +8,8 @@ Tailwind is now **compiled** (v3.4.17, pinned). The CDN script is gone from all 
 - `npm run watch:css` while developing. `node_modules/` is git-ignored.
 
 ## Not yet built
-- Form backend — both `<form action="#">` tags don't submit anywhere yet. No email/notification on submission.
+- Form backend — BUILT (Oct 1): both forms post to one Formspree endpoint via `assets/js/forms.js` (fetch, validation, honeypot `_gotcha`, `_subject` tells the two forms apart, "call us" fallback on failure). STILL TODO: link Crystal Ray + Florene Davis in Formspree and set them as recipients (currently routes to Jaylen's address for testing); check free-plan recipient limit; move the Formspree account to the business login at launch.
+  - Recipients: Supervisor Crystal Ray + Office Manager Florene Davis (their emails are in the client's Oct 1 email; set them in the form service dashboard — NEVER commit them, the Pages repo is public).
   - Plan: Netlify Forms (add `data-netlify="true"`) once hosting moves off GitHub Pages
   - Interim option if hosting stays on GitHub Pages: Formspree or similar
   - Requests are monitored by the Supervisor and Office Manager (client answer #25); response time still unknown
@@ -32,9 +33,11 @@ Tailwind is now **compiled** (v3.4.17, pinned). The CDN script is gone from all 
 - Contact page: map slot (address is confirmed — a real embed can be added now)
 - Service Areas page: map/graphic slot
 
-## Removed as unconfirmed
-- "Since 2016" founding-year claim (homepage stat, why-us copy, About page copy + meta) — replaced with confirmed facts. Re-add only if the client confirms a year.
-- "dialysis, therapy, specialist" appointment-type list on homepage — now generic "medical appointments" until the client confirms.
+## Resolved with the client (Oct 1)
+- "Since 2016" is CONFIRMED (established March 2016) and was restored. Trip types (dialysis, therapy, specialists, groceries, work, airport) confirmed and added.
+
+## Downloadable app request
+- Recommend an installable PWA after the form backend: `manifest.webmanifest`, a small service worker, 192/512 px icons (no logo exists — render the inline SVG mark), `<link rel="manifest">` + theme-color on every page. Android shows an install prompt; iOS uses Share > Add to Home Screen. Native iOS/Android = separate project.
 
 ## Once forms are live
 - Decide notification method (email vs. text) based on the answer to client question #25

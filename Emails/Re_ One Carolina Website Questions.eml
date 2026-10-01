@@ -1,258 +1,239 @@
-Received: from PH7PR84MB1984.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:510:157::6)
- by PH0PR84MB1905.NAMPRD84.PROD.OUTLOOK.COM with HTTPS; Mon, 28 Sep 2026
- 13:23:49 +0000
+Received: from DM4PR84MB2238.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:8:51::9) by
+ PH0PR84MB1905.NAMPRD84.PROD.OUTLOOK.COM with HTTPS; Thu, 1 Oct 2026 12:59:26
+ +0000
 ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
- b=LHNLdNw6W8fC9Yqo1HA4siBPDp1P8nmJa2gMbGSGzfo/M6rtlg/EbktFneVLzWUNNSZ3UaLOtovZfMQtqVPSZy/aWIKuKTTwJqD1SDPPIcF7l4Cuez9Peax+4zc2vJAk//0JpCs1jAac0yaI8y9GLmmLdjNv8Oq4dMrWnJpIqafjxj//Rl2jT8IKCbh9YzaqyEFkEFK5fm8X7rHAm29TjOQzxQU/zkYxTI1j4gBQXh+EJ1Stv8AscjHQZLyRdOKKoAhkutYJq41CypN7GLvtYrcxZ4aK4Rcia6r8ViKDF6iMo8zuVttUXhtTO0TAPhRcRS6R4vC1A3znOxL51YkG9g==
+ b=FFA/OxKSEhl3tWpqeD9IGZQ9tgPa6Z2rAdwT9WBHdmmrloOoSRD8fLuG/Obq5d5WrUYYU6xSBRsnFYc+4c76EmT7dfNet7o4GtAkBa3GEmF2l63Dr+I44N01a+ZrUN1LLv6z7cYFjw/DfqerAQN3ERTniaDidTwos3rxu9G3JO63V7W/59vzJkPYpkuiRC7ic655lhavUvRa3ie0h3/fHfJ2642qPAbolXfisjAd5EbRhVbYyxZDtHX5pxetpFiEusu1cppsDIUYNL9cu7OVLAMzTkzL3WHyXmTMD8ErtnmzTGtN/PFHCDhX+/ha82EzdKQ5fn6muWAMQfx6oH17hw==
 ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
  s=arcselector10001;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
- bh=mP6cZ7A2ycTxoSzfZgNceedzTiRbHmM0iSirKNRK2OY=;
- b=jIWIk2bTik88N1aY/lgo9HFlO/IjbFHTm63ekuj073bVgA50P4riM8JAVYvVX7BplPFPWI5W1m/JtVv5WVCgkCuLpauDe3vsdxFRmh8VQYc2aBY/iijO5lwh2Zi1MrgJMKnErEvh/jtyUcLF4slP+Dx5YQeF2pQ+V19LHP8ztEiA+5dnwnH7YRP9ShBPSxsf5K1iI+CzIFi/F4pFbPu78x3ILtWIefTyflrou37BQ2ZV+r65XV9yO16QbVpPKBWc4KBSk8eHjVVAu08OiYJ3QIaOmQXlRWqAWjnf3DRZ1zTjWEOvUFCqwCbj60w2zbTsHEfrZ+A5rf+wlvqEgc0yVQ==
+ bh=GJIp2RLBeHvEVT/f0pVzR9IehvgWqL1DH16mZX+1jiw=;
+ b=C/0TsP7nSUnCfR59soGt5QVaFfQ8YAKe2MwgKf0E69PwhfOr7rnt2EEi4Lo76MZPK7cRWSoV93edaW5CmxTFiFxtYkYtJ3XW3zoKNqMnjE7Gw6+2UEDEkU3+Hw+zJISjKPgJ1w9INn2t5owfTugiGkzeN1EtHslOOB2UESmSGpSfcqDrUdariplvdMEgGbu5ZwxvEciaDOqQlL/Uur+r7GUqL9E/DJ8Jp3kL8R0dRdt1BA1uEQhgZ0tIQFkyLQqm9f4c8I3Fxu3eq0dC7yvXS8zM8y0r1D1TEBG4Kcj2O4Zr9lwymcA/f7u2MiYAwqylFMMqV2fKDNIdP90++MsDDw==
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
- 74.125.229.42) smtp.rcpttodomain=outlook.com smtp.mailfrom=gmail.com;
+ 74.125.229.140) smtp.rcpttodomain=outlook.com smtp.mailfrom=gmail.com;
  dmarc=pass (p=none sp=quarantine pct=100) action=none header.from=gmail.com;
  dkim=pass (signature was verified) header.d=gmail.com; arc=pass (0 oda=0
  ltdi=1)
-Received: from BN9PR03CA0216.namprd03.prod.outlook.com (2603:10b6:408:f8::11)
- by PH7PR84MB1984.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:510:157::6) with
- Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.451.23; Mon, 28 Sep
- 2026 13:23:48 +0000
-Received: from LV8PEPF00000068.namprd03.prod.outlook.com
- (2603:10b6:408:f8:cafe::61) by BN9PR03CA0216.outlook.office365.com
- (2603:10b6:408:f8::11) with Microsoft SMTP Server (version=TLS1_3,
- cipher=TLS_AES_256_GCM_SHA384) id 15.21.451.23 via Frontend Transport; Mon,
- 28 Sep 2026 13:23:48 +0000
+Received: from BN9PR03CA0468.namprd03.prod.outlook.com (2603:10b6:408:139::23)
+ by DM4PR84MB2238.NAMPRD84.PROD.OUTLOOK.COM (2603:10b6:8:51::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.21.472.18; Thu, 1 Oct 2026 12:59:25 +0000
+Received: from BN2PEPF0000A994.namprd04.prod.outlook.com
+ (2603:10b6:408:139:cafe::21) by BN9PR03CA0468.outlook.office365.com
+ (2603:10b6:408:139::23) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.21.406.11 via Frontend Transport; Thu, 1
+ Oct 2026 12:59:25 +0000
 Authentication-Results: mx.microsoft.com 1; spf=pass (sender IP is
- 74.125.229.42) smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ 74.125.229.140) smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
  header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
  reason=100
 Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
- 74.125.229.42 as permitted sender) receiver=protection.outlook.com;
- client-ip=74.125.229.42; helo=mail-dy2-f42.google.com; pr=C
-Received: from mail-dy2-f42.google.com (74.125.229.42) by
- LV8PEPF00000068.mail.protection.outlook.com (10.167.248.41) with Microsoft
+ 74.125.229.140 as permitted sender) receiver=protection.outlook.com;
+ client-ip=74.125.229.140; helo=mail-dl2-f12.google.com; pr=C
+Received: from mail-dl2-f12.google.com (74.125.229.140) by
+ BN2PEPF0000A994.mail.protection.outlook.com (10.167.248.136) with Microsoft
  SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.21.472.14
- via Frontend Transport; Mon, 28 Sep 2026 13:23:48 +0000
-X-IncomingTopHeaderMarker: OriginalChecksum:E79943957E5A84B92B9E442043DD9534806CC5E60B1E3AC8B193F42014226704;UpperCasedChecksum:7DB03E8416C3BA4D064938DEE0724FAED13232F2198F0625999501DB0EE8A6A4;SizeAsReceived:4609;Count:19
-Received: by mail-dy2-f42.google.com with SMTP id 5a478bee46e88-3411e0ace58so4186656eec.0
-        for <MJayLove22@outlook.com>; Mon, 28 Sep 2026 06:23:47 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1790601827; cv=none;
+ via Frontend Transport; Thu, 1 Oct 2026 12:59:25 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:57E560DAB585FB4A4C927C9C1BCB9F6EF88D14801C72B6017F7253DDC0725C1C;UpperCasedChecksum:3B5F1E3232B8349F523F3C9DE532C2A363A08BA252A265DC97AC0CA619332A82;SizeAsReceived:4821;Count:19
+Received: by mail-dl2-f12.google.com with SMTP id a92af1059eb24-142dd04f7f2so4890651c88.0
+        for <MJayLove22@outlook.com>; Thu, 01 Oct 2026 05:59:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1790859565; cv=none;
         d=google.com; s=arc-20260327;
-        b=lEANZf0dCCnmxtF0QUpo66M9FDQamHN6r+EKGZpD8KU4MgZMA37z0wwZnDBJuqPGBE
-         02WCZrxEM4De2AkN5Fw2hs7r8MNryUTdmBKLOcAki4JLAox/N9KkEa21nTbtLQkOLc+5
-         1zn3aq9jAIjzX11xF7IT3qBInthCWsuVuTCCmOQKDnt1RNP8OKQnI2ZZmbT3QOwKhIYD
-         eq3MjAQlIchmiL7UDjna+8qxa5LF/RCEkFmXYOFQtIJtGK02T8ChPDZPWDmPcL+c7F6H
-         cAR9wEEkpWwbbOrar2XtaPlcy9jCDGhRRB8N/jyGg+3Nb/OEAVMzfal7HznWt6Yd2Jpe
-         uuAQ==
+        b=Y1Mpoj029Y7Cr4ecnrmpINtPcSvpeG+Y+CUOxa0ynYs33UPQdgnu32xCyW6XD7IXaX
+         lV2A6gzaifP4EkiQaG7hYuabpSMYD7BxHmqEJysPN6koxiPASo0d5YpIWe5BcEsCFMd9
+         kysrKvAwu3B5bYgFh20Qii37SV8ektOsjeXyh3rj8BUNf4h2ZsakKirUDhw6x71KncCM
+         L/sCz3YqPBb0pXK1dNVHaX/OWSqO9z2UK0R9bRRfZMwQrO6pZhJKvayRV29SkbmjrXIe
+         iNE8E91z0SLRjwmal7t2Eg/552Ii6Ri3DJLcGzK4Wb87JWgs6yWsPoVYQt9I0fYo0kJO
+         rdDA==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
         h=to:subject:message-id:date:from:in-reply-to:references:mime-version
          :dkim-signature;
-        bh=mP6cZ7A2ycTxoSzfZgNceedzTiRbHmM0iSirKNRK2OY=;
+        bh=GJIp2RLBeHvEVT/f0pVzR9IehvgWqL1DH16mZX+1jiw=;
         fh=ERSyKl+at33Cf/hiYbR8x/WWTmGMInyrG8CZZ2ouFFw=;
-        b=VLq4118lTH23XwMVuPVZ/Xip95V31TNJuss3tqyeq1ziPlRrC0s90qDAsSlrWKo5G1
-         jW/lme9f8krofsut8cc2FbwoaDnuSdXRLn/cLLQuuqEQq9RO01PjoJhn0d/bzZMd0LI8
-         NNh2HdrJz9WenDnvjas6t+BPg+qQbNr3CY77bjqTymB6dpj0L4BqPke1mPuWZ/Ry/X4N
-         N9VGLLRI1PWgWdv3+/7xUlj5Q2DD4ePeb6BR3kfv0UN2v6L7CxKrvyZ/yNY3IzGjPKKP
-         Dt+XN7HLGIiooaPjB5pMH2BGWJcmH6skkYDoKNBTcVPl43qJI5Ha0sY/fhn+rYJORs4u
-         FYvQ==;
+        b=WicMGXExR8Pd7qFGaGxGLQJTaazxTdkmb2YB2RKR2/JT8AE3aTz8iQYy4/FxnacYsa
+         pcwHgyCFQ1+6qXyIRRBkDDpbXPgLRWYrAI++XF8hQmqwlTjOa1DF+xMRiU2AM3xDmytY
+         9A2HmwiOD+tbdmic6Wf/No4nxY87qipia1he8l+L4sUFEDc8RQjw/GjGy0ce/92gjjcJ
+         kv9Gaue06xCYTshoyZRwBdCE4s98QHTza9JwoxwoppNj+valvRws+m5uvageexYw64pn
+         gE0H1EKpCHxU4DW54sY66Ds43ARTYxbYZ9ngcwKUVQJ4tI210SuY3RrF7k0VYw5jPaPm
+         ohNw==;
         darn=outlook.com
 ARC-Authentication-Results: i=1; mx.google.com; arc=none
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20251104; t=1790601827; x=1791206627; darn=outlook.com;
+        d=gmail.com; s=20251104; t=1790859565; x=1791464365; darn=outlook.com;
         h=content-type:to:subject:message-id:date:from:in-reply-to:references
          :mime-version:from:to:cc:subject:date:message-id:reply-to
          :content-type;
-        bh=mP6cZ7A2ycTxoSzfZgNceedzTiRbHmM0iSirKNRK2OY=;
-        b=I32ss3m6EfagR2EoAHU5RgBowQJrNpswko3phqNse8IaV6QM/hLIsmhWdScTUCn9Lw
-         Mps8p8rnz/y39iYKi3y/NbzTxEXJTZf3gEYtIeUulpDSsMlCcV6A52tflOsTTeaGHAN8
-         WeeAPrBsQpZjNBYh1YNamL4Hp3xPLMB2+6rr2Oi9ccahGR5eTQf6iKjV4bauarv2Y5ub
-         fbm5/4sj3XMNewbi0wKq6jHg2jy/M+ZcsOHQFvs32FEbGQy3NyQN/ANvr9jgCQZeOkGK
-         +7+cxNmTbQs3mU7KShV+LGTtPP1SxxY5+9mUbc0dqnjgXBvi747J4nWw9Aj5NuKHYH+s
-         8BFw==
+        bh=GJIp2RLBeHvEVT/f0pVzR9IehvgWqL1DH16mZX+1jiw=;
+        b=rgn+b9x3IOk2PqxyNA+dKmQ8oh2jz/euSS9Ll883V7xEc3+C9+qOldakMNMbtdYcdi
+         hH1OdVgZ+q51kafnQBPFTuKE2O2nX/Jnd47gOHfIHoggU+cNoUCSG5ZGt5YCrBo3YIf+
+         fNsZAqWNuF1Tt1Qkxwoax1AvdchYbShvFBIdyHYd0starZOhtGb2O6vpK4uikEHGAuzK
+         DK2/Moe/XLKq75FgcBO71vJPJ3r39MmOFo7oQ0OFF1Z4AIyt8CVQGa1BT9pXqP6u+44V
+         PrafPqTxH/E9fvZddPtqw58UIS2H+JCq0x+urSAvirP6i0pIEHcO5NHnbD2j9+d/9N97
+         9gdA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20260707; t=1790601827; x=1791206627;
+        d=1e100.net; s=20260707; t=1790859565; x=1791464365;
         h=content-type:to:subject:message-id:date:from:in-reply-to:references
          :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
          :message-id:reply-to:content-type;
-        bh=mP6cZ7A2ycTxoSzfZgNceedzTiRbHmM0iSirKNRK2OY=;
-        b=Ng1PypogKjOJgLseMZk9lFkU6LcLxeYfdeaZ++QinSRMk6PlEBQqIf51gyIkNssbgX
-         yfSfWDZRd7e0GZhPwrv+uRocwp0FpW2sSGTU9elBl8UT6Qu8CUjg8vl9MLESb9j6UCbo
-         uNR7x9up3eYNdQ8O2PxoC98N0gLIsqQnIb8S13sFMQnVwDRH0Dz3qAMBYbjloVXLc0tJ
-         1/wFhpmFV20ZT8/onf6p4BtpvS7EkjTlirkSty8rZ0UrOm23Src1nETzT3sWssk7qY0w
-         pExKnWDis1UHz6DlzrFFpCQNN789tSlu7ptoRurUpSGas2IxgV8+mjsKZTKT/LWIlQKU
-         MMig==
-X-Gm-Message-State: AFuF++lRbSez5PybHFllNA8h4BLREPD/ukhGSVtVbXhwYV1HA/2K+qcZ
-	TL653JFRt0ZSH4p0EtUiW4stXicF9x7C793mC6jyNS9yX1o8vz2lTN9EllJNzJYBXpjnpBTOvVo
-	umPykt9K0lSBvd3mlk/9tVqVsn5b0FMXmkg==
-X-Gm-Gg: AYBFou2093Jc3vCPWNf57wigVHlDw9YuhCOEenLghB+1AP/9OGLjRxyZSqx/qJN+0pz
-	LbT9D90O1SGMxLeVUSOAQbx1YZIbph6RY05Fju4oyOEg1CPuusjmfZUGcghpCrUk6xiLMmJfBgu
-	X9jLNeg8rYzsdHmFMnBeAKJdJsSN69Slt2nxnYehUxT3EPdL0oEiS9e7SjDHx70Fdkv8k18+b3Z
-	LTvWJM2pI/N+DdekbTA/+IFhYk90O7QLG51DlxL71GdVNbu0mfz6v5HQ1ne5aJzvsk7D/zcHtea
-	Kdr73WdBEUmYOsohN2dlrUpNxrnAa6NcWTqV9D3Bx6RlNlaGKQaVBrkubpd63HuOGa2t3oVI0+i
-	5dnoTXdmQ8w80JlvWBqP/wU7pfr//iiKi2oNc2JG2lh3/E7Ma5UWXJZtcANWBNKIBTTWbS787GU
-	JuQFakrN7exG7eBLJEnSLjJJPSzEKqLC75XCvX
-X-Received: by 2002:a05:7022:3704:b0:144:ed03:8972 with SMTP id
- a92af1059eb24-146cec4af63mr9718114c88.16.1790601827343; Mon, 28 Sep 2026
- 06:23:47 -0700 (PDT)
+        bh=GJIp2RLBeHvEVT/f0pVzR9IehvgWqL1DH16mZX+1jiw=;
+        b=jlkALCXGS8t+37qUIZaLp5HT6Q20wVr0RH7iGbZd/UMo+is+ZZGnqSWsdFn6gjmsXv
+         VslVQiZIgVLtMtSP6dnXrqSrYxvs6GAHG+0yRHZ+0rp3botwAr8CsK1C4GJh1fnnQSaE
+         Gd851z4VULc8Tm5ok5rJgyzApZzdwvIhikfbu2cS8WrktIm2dr5rCofdrsYtrFTWLfiE
+         sbUslB3PtYsTITDiHpZRmQajARv+Jje2b92UMxiNiT7Y89grpwYoaBJn9dQvPmmv0W4J
+         mQc/bV1PebJzvHRmm8HVJvOGCjyHOYLZ5XTI9YcIWtLn5yKLrKEOAJuToOAlbHRb0BdO
+         KtVA==
+X-Gm-Message-State: AFuF++kQjsthdaPQ8Kc0ERFaqYxhT22kue4IsFcDDyBjWSVCIjrhg0TZ
+	M+I6j1T1iPvRyTeMVtL58Jf+C+cQlITX4YNNBGajj42+e4QNT0ZRSjeTjPyoWZkOMSEtl0BvQi7
+	5iPrO36fffw2l+3+uAc1tXfxpRN3J0xTPhg==
+X-Gm-Gg: AYBFou0B0i0LmmM+AVeR6jitEIUadB9JbnS09FE73m0kxu6ctTwXNDNUYsLNMcJzWpK
+	1bLelQn2/ZbkHN2qJi9y5ZW+hdpLZvxGoyXjSF7FMsCDfY6RRjLMbETUJ5qyGPznLcsaxKNWJAO
+	8z5/NsUCLNwawcMBNwYzMW8RTJ1NXT43IWoLdmioc4g5fSDNgdgS+KydYC4BJ8MZmN/zjRiVjL1
+	NDnaJWVR0BJesMpnLn3w0Miuo7YgmkQ/EIsNSb7ks3b72209vqHfC+TEp+nx4egg+rdFxFFunqw
+	Tn2a/KXRGh3BLpYhfZIvnXNvVYrSpRApCOt1inbRMugoS8IIJht7Cmv3hUfYEyBCrqPhVvLGPxz
+	0A3guGnAgAjmZze9K1640kHczVThh4/wYxrJ0JwI0ugkaezFb49QYJHJgja1eY7Yr98615fhl25
+	1cMbCz3Qch7LeuL5ZaRHz63EDO
+X-Received: by 2002:a05:7022:3f07:b0:14c:1f57:3e86 with SMTP id
+ a92af1059eb24-14d34032e88mr4403050c88.47.1790859564445; Thu, 01 Oct 2026
+ 05:59:24 -0700 (PDT)
 References: <PH0PR84MB1905A190C30A1CAC00058D99D3DF2@PH0PR84MB1905.NAMPRD84.PROD.OUTLOOK.COM>
  <CAEusRgVo0BV5VkH_V=qMkbjN_N-z41UyOiALOfKCoGvZQibjfQ@mail.gmail.com>
-In-Reply-To: <CAEusRgVo0BV5VkH_V=qMkbjN_N-z41UyOiALOfKCoGvZQibjfQ@mail.gmail.com>
+ <CAEusRgXjcsEYGjB7baZB=sZyaECfukSAE7nnfp1VQ3cyR_G11Q@mail.gmail.com>
+ <PH0PR84MB19055BA7AA51E11518040CBFD38B2@PH0PR84MB1905.NAMPRD84.PROD.OUTLOOK.COM>
+ <CAEusRgVfY59StQVxMDTE-DWQawPeiGra_VCoTuauQPxyR4_u=w@mail.gmail.com>
+In-Reply-To: <CAEusRgVfY59StQVxMDTE-DWQawPeiGra_VCoTuauQPxyR4_u=w@mail.gmail.com>
 From: Corey Sweetenburg <carolinatransit03@gmail.com>
-Date: Mon, 28 Sep 2026 09:23:34 -0400
-X-Gm-Features: AclHuK9eyyVj1tpcDNcidREZF2nkLYFSa8ifKaPurlNyy3o_PTgDkW--D5NIVUc
-Message-ID: <CAEusRgXjcsEYGjB7baZB=sZyaECfukSAE7nnfp1VQ3cyR_G11Q@mail.gmail.com>
+Date: Thu, 1 Oct 2026 08:59:12 -0400
+X-Gm-Features: AclHuK9YFPfJdJoNU_GMQelVUfKsEufVpXT5c1vR-XjI0qZSzW9VQnu97jzpdOs
+Message-ID: <CAEusRgUdSm-TcnHaQ6AsdfcEo_+jGK274-Q3pgjsa9o85PAX7g@mail.gmail.com>
 Subject: Re: One Carolina Website Questions
 To: Jaylen Love <MJayLove22@outlook.com>
-Content-Type: multipart/alternative; boundary="000000000000da5f68065c8af9a5"
+Content-Type: multipart/alternative; boundary="0000000000002e718b065cc6fc29"
 X-IncomingHeaderCount: 19
 Return-Path: carolinatransit03@gmail.com
-X-MS-Exchange-Organization-ExpirationStartTime: 28 Sep 2026 13:23:48.1026
+X-MS-Exchange-Organization-ExpirationStartTime: 01 Oct 2026 12:59:25.3565
  (UTC)
 X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
 X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
 X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
-X-MS-Exchange-Organization-Network-Message-Id: e14ae1ec-b4ac-4080-f357-08df1d63bab0
+X-MS-Exchange-Organization-Network-Message-Id: ec734e76-f725-4ecb-db11-08df1fbbd210
 X-EOPAttributedMessage: 0
 X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
 X-MS-Exchange-Organization-MessageDirectionality: Incoming
 X-MS-PublicTrafficType: Email
-X-MS-TrafficTypeDiagnostic: LV8PEPF00000068:EE_|PH7PR84MB1984:EE_|PH0PR84MB1905:EE_
-X-MS-Exchange-Organization-AuthSource: LV8PEPF00000068.namprd03.prod.outlook.com
+X-MS-TrafficTypeDiagnostic: BN2PEPF0000A994:EE_|DM4PR84MB2238:EE_|PH0PR84MB1905:EE_
+X-MS-Exchange-Organization-AuthSource: BN2PEPF0000A994.namprd04.prod.outlook.com
 X-MS-Exchange-Organization-AuthAs: Anonymous
-X-MS-UserLastLogonTime: 9/28/2026 12:42:24 PM
-X-MS-Office365-Filtering-Correlation-Id: e14ae1ec-b4ac-4080-f357-08df1d63bab0
-X-Sender-IP: 74.125.229.42
+X-MS-UserLastLogonTime: 10/1/2026 12:27:17 PM
+X-MS-Office365-Filtering-Correlation-Id: ec734e76-f725-4ecb-db11-08df1fbbd210
+X-Sender-IP: 74.125.229.140
 X-MS-Exchange-EOPDirect: true
 X-SID-PRA: CAROLINATRANSIT03@GMAIL.COM
 X-SID-Result: PASS
 X-MS-Exchange-Organization-SCL: 1
-X-Microsoft-Antispam: BCL:0;ARA:1444111002|54080799006|9020799019|260826193500599007|3069299007|29090799004|47200799027|13020799009|58200799025|260826003000599003|1380799030|1370799030|1360799030|440099028|3412199025|56899033|30041999003|2607281247196008;
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Sep 2026 13:23:48.0065
+X-Microsoft-Antispam: BCL:0;ARA:1444111002|260826003000599003|13020799009|58200799025|47200799027|9020799019|54080799006|9400799043|6019299003|260826193500599007|3069299007|260928210016899003|30041999003|2607281247196008|56899033|1380799030|1360799030|1370799030|3412199025|440099028;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 Oct 2026 12:59:25.3227
  (UTC)
-X-MS-Exchange-CrossTenant-Network-Message-Id: e14ae1ec-b4ac-4080-f357-08df1d63bab0
+X-MS-Exchange-CrossTenant-Network-Message-Id: ec734e76-f725-4ecb-db11-08df1fbbd210
 X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
-X-MS-Exchange-CrossTenant-AuthSource: LV8PEPF00000068.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthSource: BN2PEPF0000A994.namprd04.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Anonymous
 X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
 X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH7PR84MB1984
-X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0547492
-X-MS-Exchange-Processed-By-BccFoldering: 15.21.0451.014
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM4PR84MB2238
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6104320
+X-MS-Exchange-Processed-By-BccFoldering: 15.21.0472.005
 X-Microsoft-Antispam-Mailbox-Delivery:
-	ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000311)(920221119095)(90000117)(920221120095)(90013020)(91025020)(91040095)(9050020)(9065024)(9100341)(944500132)(4810010)(4910033)(9575002)(10195002)(9320005)(120001);
-X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0xO1NDTD0z
+	ucf:0;jmr:0;ex:0;auth:1;dest:I;OFR:SpamFilterPass;ENG:(5062000311)(920221119095)(90000117)(920221120095)(90013020)(91025020)(91040095)(9050020)(9060121)(9100341)(1010050)(944500132)(4810010)(4910033)(9920006)(9510006)(10105021)(9320005)(9230038)(120001);
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0xO1NDTD0tMQ==
 X-Microsoft-Antispam-Message-Info:
-	=?utf-8?B?ckhwZmk5aUdSYnl0czhQVnEzZTdrSGdjSXVkTlVGK0pMVmh4SHJNLzV0ZXhw?=
- =?utf-8?B?VTk5Q05lZDIvTThJc2Y3VC9lYld1NFgzQ0hJb1V0bGRvb2psOVo5RnVxWE1Z?=
- =?utf-8?B?aW5DZGhkaVRtZkd4SHFZR1I1WnpSd3NYSFhRaDdKSjB6VzZmL000Qmh5Z1ho?=
- =?utf-8?B?SzhaVU50MjY4UnM4c09LOWdxdDEwek1TaWFhdUZNMlpiSlU5ZUpXWkk5bldN?=
- =?utf-8?B?QVdUeGswcG5uR1YvMCs2SWVXcEdLSkwyTkI0MzQwQXI1cHl6bjFqK2JCTVVG?=
- =?utf-8?B?ekRtZEpsejdkbHY5UHo0dTVTTUU4S0JYL2p6ZTN0Z3YvcFNtNkR4ZnRVbSty?=
- =?utf-8?B?UnJoSWdBbTVOdmI0Vnp6UlcyVUpNMDM0M0NhMmlkL0FLTlB4TCtRTFl5Y3JX?=
- =?utf-8?B?NlB0WnVkQXhkZDJUbFdmRkh4THdldGVCTWdGMXo4YkJQa05RMSs3eXJ5b3g5?=
- =?utf-8?B?T0RkTzhuOGRtN05VL2VjZm5KOXhkOXVrL2tsVVZiV29WM0luRm9ibVlLYkJJ?=
- =?utf-8?B?MFJvekl4YmRvOFZ0bEF3VndGUXh3cjBnbVB6RW40YTNSRi9aTXJYNDNJcjZF?=
- =?utf-8?B?Z0d4MDNCOFpRZVYxelhjMFgySExGeFJNNnYyaUN4QWxCQTFUVVRaQkZ0MWFU?=
- =?utf-8?B?Z21ZOU91anlWV0xvZEk1a3BLUmhyQysrSnZoenpNR0RlRUdYaEtYUEVLL2Np?=
- =?utf-8?B?Y0ZQckVwUWNnSTlhbGtWU09UaC8rYXJTalJLNmZOWjd1MDlRMUFYTkE4bGpj?=
- =?utf-8?B?TDVGUXdFUm8rV1AyOEFjVGpJMFJtN2tJYmZNcFQ2aVVHSjdTc1VaQ01JcEVo?=
- =?utf-8?B?Q2hNa0prVmxXVlJRa2taeFBGYzdkSHlpVFkrbmRMeEdRQUljbWFqZERUdzZz?=
- =?utf-8?B?LzZSN1Z3YUZlNG5YbURlTVNQWTFXTE9ScG5mZFZrV2xIeHBidWdSOU9WVnV6?=
- =?utf-8?B?bWFNTTBkbmJLOVZJQkg1RGVlaG5LVzVSRGh2VWkvekJ2a0x5MlJYUUlBT3FR?=
- =?utf-8?B?RE5vc1prL0R3eUYvWkpJMnNnYjBTRmFrNlFER29TN3U2SkRCcFBUV0V1UnZ5?=
- =?utf-8?B?czg4THpadzhzK3VkTU9Gb2JJbU5naWs4MmtnbHRzNGFXQjR6UU1iQUJvRGJw?=
- =?utf-8?B?eWcwZm5OWXkveHhTcFp2SzhkR0RBU3Vta0E1SU9rRUtJM1JVVnprK3Eyb25B?=
- =?utf-8?B?MzYxWUlGRzg0Ykoxa1lWTzFKYTdXZHN4aVNNaHdTQ2l0MHFhMDA0NXNMNWFR?=
- =?utf-8?B?NHlRS1F0NzFXWVNodFM0NGlLVFNiOU05cWR0VjlBNnk1eC93TEdOOU5CMUFs?=
- =?utf-8?B?eVFDVWhMeUQ3Zmh5Q0RyR29TYTFkc0pyU1A2Y2k4UnBuZXcwdjhoKzRRMytm?=
- =?utf-8?B?UVJscmpvbVY0clUwR21naFNNLzd4a2hMTGdtT3IvLzUxb3NmbzVOditzUzNk?=
- =?utf-8?B?WEtJR0tLbmhyN1BqcnNqbTd4bDROL01QTlhRQklGN3dvRGVOY1FISVZZdnBH?=
- =?utf-8?B?d1NGVG1JeWpnc0liQU12OFBMNFlTRmU1dGdLREoza0tjSllMZlN3SkJZdElJ?=
- =?utf-8?B?bG56TzZ2YjRsNTQzSkxBMW5vWVlnd2VTRTRhTU9SWGx5ODVWcjFlNFBSUWhJ?=
- =?utf-8?B?dnZac256TE1qNEZFZkNDbE1uWGhTNVV0Z0VpUTkxd1lRN0VJVGphYm1jdERF?=
- =?utf-8?B?endibXQ3RkFudk1TYSszTXFvTmQ0V3Q3ZndHSzRwWEl4eVgyUXhmYXRpUVBH?=
- =?utf-8?B?dGptcDhyTlJ2TW8xU0hBck5EVG9FV3k5U0R1bjdaNEptZ0pDYUhHRmNBdk10?=
- =?utf-8?B?SEtyZnJTK2cxd3pqUnBSZHMrUzZ4dDNyNXc1QXNnUUFCT2k0bTJNN1RyaWhK?=
- =?utf-8?B?U2hQL08xUUVpcTA1Y1dtbmZCMzhaaDdkS09XV1dCSXF1azFHaG52ZzBkVXRT?=
- =?utf-8?B?S25TeEpFOGpNbUJpeGUvOHlsaEo5R2NjZGNoL0xLQzVKZXlnV254dnpwZmlD?=
- =?utf-8?B?RUxEOHlBRkprQnlNZDNOeGJTYTM2RTF5UDFFd1JnWDZpR2lYWVdXdXNyS2FP?=
- =?utf-8?B?OFVUUm5FejdZR3Y1ZHFXbm5TazNRalcwQXlPSGpVM1JsSDlncTFQYXErT1FR?=
- =?utf-8?B?MnkzNm9EZFZRV3NhVmRxYytxSEpZbnRDUnBXeTJxSHNiZzJlVEtZQUllTzhZ?=
- =?utf-8?B?MUFjRCtobzRFRkdWT1YxMTAyWUU0MVNZUmM2dkNYaE5ZTWdQbzhXbGo0WjA0?=
- =?utf-8?B?M0JuNzVIdWJUQW0zMFlHaTd4SllJT05BaTdNc0liM1czY1BFUXJpaFpPNGNE?=
- =?utf-8?B?TThxOTJzcEFZV2NNVml0L3pOMGhDMDBieEptT05CTlpTWEN1aHRVZkx3VkdQ?=
- =?utf-8?B?angvUzVKL2tRN0VZNUx3VTNXQnFlZ3NXSTJtd1EzUXUrZ21YdXA4dmpBRmhH?=
- =?utf-8?B?cFVHcjIrWnJET2x5c3EyaFlibnBVdm14a2E5R2JlQUFGamNwSEx3cklxdWxB?=
- =?utf-8?B?MDF0N003Z0k5UVBiQnRXR202MWlmeHE1YmlOR0k4OVp4WGw3R3ltYy8wQkkx?=
- =?utf-8?B?aVVmNkRhd3lEVGkyeUpyeFlad3ZISENHYTZockZ4YWJsT1NHcEltMzdZU3hq?=
- =?utf-8?Q?jxlK1YRER1eVMy+n4PXRLjbQzbCg=3D?=
+	=?utf-8?B?dFBvN05TR1p1eTJiYTVLSVRTLzZ0T3BUWk1VdTd5TDA3Mmp2bHBQdm1xWVZv?=
+ =?utf-8?B?K1JlU1BscVZIbzRPOUl0Vy9xM1lVNTRVMnNiN2h3dmlPQ0lBdzNsdCtxYzM0?=
+ =?utf-8?B?bjRzdE95bEt1M2hHZ3VQeUxJdTd6a1JFSXNpY1lEbVY1SXBob2tRc3IyMXpU?=
+ =?utf-8?B?dWN0cTB3dUMyZDRhUjMwUXladHdtNzY0bkRjY3VxNmloMU1PQkJCNFNXTVln?=
+ =?utf-8?B?S2hHbjZpL0YwVEUrZnpOTDRWa2F4Um1YSGovRXp6NklodE9oQks2UUd5M1N6?=
+ =?utf-8?B?ZTJDV3dQRi9Tc1c3ZzhtQWdBcDhWcE41aFJxbzVqajIxRnJ2azBXOWs4bGJQ?=
+ =?utf-8?B?RGZIYXdENDlTd2VHb2lmQ050TVA5bGhZUU5lYzBidElobHRxOTBSU2JTRzRS?=
+ =?utf-8?B?TUU5clBZeTRoTzRNMm1ER2NFak9OTUhTMlJBNmF0cVlDbC8xdEc1RThSeGwy?=
+ =?utf-8?B?M0xXSHNOZFBEbzJEZGIyYWMxclFYWnU1Y0xHU2JjSkZlM1pyOEEwWUdGbzRn?=
+ =?utf-8?B?RlFEYjI1a1cxQjZKbHR6TndqKzE1ZUp3SjlKbGdNbEdrUW5pdDZZMTRkV0cv?=
+ =?utf-8?B?ZTBVaDZWZmhqRll2Z0hGc0dJRkduSkptZyt3UnE1Z0x1Z0I1QUIzOWFiOSto?=
+ =?utf-8?B?RHVHRXNKMkE3UTRSSTNYNEVxV2JTWlFrVDdaTXpIeG1OcC96b1VSR1J2N25N?=
+ =?utf-8?B?Um9IdksyWDlrbnZiZnI0RkJBM3pmT3lyanAxOFE0RUxQRDk3Y2ZXcVc2ZURR?=
+ =?utf-8?B?emZvWFkzWlF1cFZ5SThya3dKZmdOU1RacXQ0TFVjMld0ZEVrZENIZEsxU0Vl?=
+ =?utf-8?B?ZHJtU3FZdnhRdVZCOC9tdmljYmZqdUgxV3F6bEJITVB5TUdnQ2JYSjRSWm5n?=
+ =?utf-8?B?ZWo1YkFRbjVMUXRsbjBtRXFYUnZIaDJtZmwxSitRTDZLWmlxcUNaSUR0eHJW?=
+ =?utf-8?B?aWpsUVcxU1lVMUxvdmplaXF0OThQbTU1anp2TWs5OTlkWE8zb2Y5cDFESGlh?=
+ =?utf-8?B?UFFaaUpHczV0d1hiK1RWQ0EvTVhBZ0dGSktSRGgzb05qb3hFTzJYVGVjS2o2?=
+ =?utf-8?B?aXVITUwrY0JDZWVYMTJNOWRuL0NKMTFBSDFPd0dVMm83YnR1MVl4M05QRzVv?=
+ =?utf-8?B?SW8xVHBGaG41RlpKZ2JEOUtIbHYzVDdvT0ZDaTVoOGxKTmRLUXlVdDlPdW5N?=
+ =?utf-8?B?c0YrNHloaDJoWnVCVkQ3ejZWY1RtM0NUbkozWllPQWkwcEFtQVpnRmdIZzUy?=
+ =?utf-8?B?eU5zZkEyWVR5MEI3cDZNVUpqaGRQcitpVHRxZlQ1MUlHRm5sVlJNTWF2V0Vt?=
+ =?utf-8?B?YmRjY1RydjBKQzl4UTFrbEU1UVhRV1J0ejRiNjZZRmFDNkxEQVhqNXNSWFNt?=
+ =?utf-8?B?c0xPLzZ1cmFnU0RyMXlZc3lYeEVZbG00WUlPS2o1dXQ4d0VrMVVKRFBHcS8z?=
+ =?utf-8?B?bU1oVjhyQklWTWREM3hzd0hLaGltUEdrMUVKLzhLWFdQQ1V0MGI2R1QyQlY2?=
+ =?utf-8?B?V1h3WUFUVEVaU2FQRE1RMzZxRHM1MHB4dEJOeUFzck5lQTlCeVFudlN2V1N2?=
+ =?utf-8?B?N1lVVEtxR1JTRWplbE9oa1pGNkhJYkVYcW1qSHNSZXBDVXRUamhMYUxGVG81?=
+ =?utf-8?B?eUxDVmpoYlBQQlFmbUhFcC8rM3UyT0NsNk13anZSN1NKMXl4N2dUYWdDQk0y?=
+ =?utf-8?B?Mzd5eS9lakpIUmVBMjJiNHdUc3JjZEpUNGk2Z3J3R1N5WEk2cWsvcEF1Q1RR?=
+ =?utf-8?B?Z3ltSFVYeHZBU2FrQzBrNHloWER5RUJyUExvRXV2cEdWMzB1R1BjMnZuVTh0?=
+ =?utf-8?B?RUZaWEMveHR0dk1LcjU5eWFYaXE2QlM2OUFzb2FJd2xPbzRCQy8yMjZlenQw?=
+ =?utf-8?B?ajFUNE1WRjhPR01JSmp3ZzkzWEhVcTRFMG1RMFN0R0NneXF2d013cFI2ckNn?=
+ =?utf-8?B?cHlSSURuVDkwZ1oxdnFqRW9RWStNcFhnUVY4d0ZEVzFHUzNWaGJWSFg4YkF4?=
+ =?utf-8?B?a0tka29pSmhZK2xUOFlRREhwYmlEcjA1RWhBb1NqQ3ZzK1RDRU5tRUJtTXNr?=
+ =?utf-8?B?MnlNcVd4YjZ5NndzUldoSGdiQ0Vrbmk5aWQzbm5BU2pybFhrM2ozNUgxU0RB?=
+ =?utf-8?B?WS91WWdOcDVlZHJMWlVDMTByRnBHRmQxcDQvdzg0c3VVaE5oWEpHWmNBQllm?=
+ =?utf-8?B?aXFjY0pTc0h2MXlQa3dUTG4rT0E3NmM0K3hQS0o1TDRDYmYzQ0hHaWZsNEJO?=
+ =?utf-8?B?cy81RnkxdVYzQTQrYmhHR2R5WU9WcmlCSzk4VjlRVzR3Rmd2YWVoNVMvUFQv?=
+ =?utf-8?B?QUtvNi9oQ0xOSmVTMVhFdmo0ZlJYVXBBVHVocVQ0VS9DU21ScDVzK1pZMWpV?=
+ =?utf-8?B?Z3NDK1pINTVoN0E0d013ejlrY0pKTW9BbVVPQXVreWV1U2VxT1lEb3FTdHkr?=
+ =?utf-8?B?UzlOUUxmNTErTlBKQnRNUDNNL1VKVjNaRG9pMTRMejdORnJmTDBwRExFdTJo?=
+ =?utf-8?B?ZG9way9PK2FNaG1zZ0xRRnlKZHFLZ0RCR1JGNGJYT3djRjI0N3NiZ3VaT0p6?=
+ =?utf-8?B?NjNhMWpXaGZoTUd5RlN4Vk01bytzbmlpdmZJVXdJRUR6aUxiYmNZY1NQS0VX?=
+ =?utf-8?B?MDRtdDJHZDBpVGVuMnkzVFV2NVNuM05yekpRUnhSRWVMZzVhaHNTbzlDdXJM?=
+ =?utf-8?B?UWs5R1Q2akJ2MjErcThNb2hYYUk0aDBLTmFYakZac1JNbHdiWGU2cnlFYVM3?=
+ =?utf-8?B?UXcwSXNFTUNhRmtlMkFFRmorUTFxQ3RlQ092TnJoMUxHalV3NUI5dDV5a2M1?=
+ =?utf-8?B?d2pDK2Z4TUlZNk56OXptK1NiYVhhbFRnb1RMY1oySkhPL1BsTHY2bHE1M3FV?=
+ =?utf-8?B?UkhZKy9IZXVodVBCYzVTNWluWGZuS0p5TVNjTTdkZUhVSGRVb2h4K20vUDhk?=
+ =?utf-8?B?K3dxZ0pXSlR1ZU81R3M5QmJPSHc4NitPNHMvZkxzMnJja3JNZGVGODhoVkFQ?=
+ =?utf-8?B?YVY0QnZpUGRMTGZIcmRqaFlrQUlHeURwVEdkT3I2cTRhODRKQ0RFTWJiTE5j?=
+ =?utf-8?Q?ZJfX9wyl95I61+SNu8+zI6ejXG0YWopRk=3D?=
 MIME-Version: 1.0
 
---000000000000da5f68065c8af9a5
+--0000000000002e718b065cc6fc29
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Jaylen
+Good morning Jaylen,
 
-Here is the requested business information for One Carolina Transit, LLC:
+Here are the additional details and updates needed:
 
-Business Information
+1.  Contact Information:
+      - Supervisor: Crystal Ray (carolinatransit04@gmail.com)
+      - Office Manager: Florene Davis (carolinatransit06@gmail.com)
+2.  Booking & Payment: Clients will receive a response regarding trip
+approval within 12 hours, at which point payment can be made.
+3.  Cancellation Policy: Clients have up to 24 hours to cancel their
+appointment after approval.  Refunds will be issued through the original
+payment method.
+4.  Insurance Inquiries: Clients using insurance should contact Office
+Manager Florene Davis at 803-549-8920.
+5.  Business Details:
+      - Address: Display the Camden address only.
+      - Established: March 2016
+      - Logo: No logo file available.
+6.  Services Provided: Trips cover a variety of needs, including medical
+appointments, dialysis, physical therapy, specialist visits, grocery runs,
+work transportation, and airport trips.
+7.  Coverage Area: Additional areas include Aiken, Lee, and Chesterfield,
+with more to be added as needed.
+8.  Pricing: Please increase the rate to $1.85 per mile.
 
-  - Business Name: One Carolina Transit, LLC
-  - Title: Owner, Chief Executive Officer
-  - Phone Number: 803-549-8920 (for appointments)
-  - Mailing Address: 1832 Red Hill Church Rd, Cassatt, SC 29032
-  - Physical Address: 402-H Dicey Ford Rd, Camden, SC 29020
-  - Hours of Operation: 6:00 AM =E2=80=93 6:00 PM
-
-Services & Policies
-
-  - Services Provided: Ambulatory and wheelchair transportation.
-  - Insurance & Private Pay: Primarily serves private-pay clients (those
-without insurance or who have exhausted their insurance benefits). Clients
-with insurance should contact the dispatcher or their broker to arrange
-coverage.
-  - Booking Notice: Rides must be requested at least 72 hours in advance.
-Full payment is required to complete the booking.
-  - Cancellation Policy: Cancellations made at least 24 hours prior to the
-appointment will receive a 25% reimbursement of the trip cost.
-  - Rescheduling Policy: Trips must be rebooked at least 72 hours in
-advance.
-
-Rates & Payment
-
-  - Pricing: $10.00 loading fee plus $1.25 per mile (round trip).
-  - Payment Methods: Zelle, Cash App, and Square (pending setup).
-
-Service Area
-
-  - Current Coverage: South Carolina (specifically Kershaw, Richland,
-Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties). We are
-licensed to operate across three states as needed.
-
-Credibility & Licensing
-
-  - Driver Vetting: All drivers undergo national/federal criminal
-background checks, sex offender registry checks, 10-panel drug screens, and
-10-year driving record reviews. Drivers are CPR-certified and trained in
-defensive driving and wheelchair assistance.
-  - Licensing: Licensed with the Office of Regulatory Staff (ORS) and
-Public Service Commission (PSC Certification #9156-A). Note: Not associated
-with the VANS program.
-  - Testimonials & Media: Customer reviews are available on Google under
-"One Carolina Transit." Company colors are blue and white; photos of staff,
-vehicles, and facilities are available upon request.
-
-Ride Request Operations
-
-  - Ride requests are monitored and managed by the Supervisor and Office
-Manager.
-
-Please let me know if you need any additional details.
+(Note: I will likely be setting up a separate bank account for this for tax
+filing purposes.)
 
 Best regards,
+Corey Sweetenburg
 
+*One Carolina Transit, LLC*
 *Corey D. Sweetenburg*
 *Owner, Chief Executive Officer*
 *Email carolinatrasnsit03@gmail.com <carolinatrasnsit03@gmail.com>*
@@ -261,20 +242,16 @@ Best regards,
 *Fax# 1-803-677-1674*
 
 
-On Sun, Aug 9, 2026 at 3:24=E2=80=AFPM Corey Sweetenburg <
+On Wed, Sep 30, 2026 at 8:58=E2=80=AFAM Corey Sweetenburg <
 carolinatransit03@gmail.com> wrote:
 
 > Jaylen,
-> You are a real professional at your craft and once  you have me complete,=
-I
-> only say that because I want them to be able to view a complete product. =
-I
-> will distribute your contact information, Im working on the questions now=
-,
-> as soon as I compile the information I will send it to you.
 >
->
-> Sincerely,
+> Man I can't express to you how this is a game changer and I truly
+> appreciate this, THANK YOU!!!!
+> I have a couple changes that I want to make, we will charge our regular
+> rate of 1.85 per mile, that's our current rate
+> How will the Supervisor and Office manager receive the trip,
 >
 > *One Carolina Transit, LLC*
 > *Corey D. Sweetenburg*
@@ -285,9 +262,223 @@ I
 > *Fax# 1-803-677-1674 <(803)%20677-1674>*
 >
 >
-> On Sun, Aug 9, 2026 at 2:53=E2=80=AFPM Jaylen Love <MJayLove22@outlook.co=
-m> wrote:
+> On Tue, Sep 29, 2026 at 11:05=E2=80=AFPM Jaylen Love <MJayLove22@outlook.=
+com>
+> wrote:
 >
+>> Mr. Sweetenburg,
+>>
+>> Thank you for sending the business information. I've added it to the
+>> site, and you can review the updated version here:
+>> https://mjaylove22.github.io/onecarolina-demo/index.html
+>>
+>> What changed:
+>>
+>>    - Your phone number, address, hours, and PSC certification number are
+>>    on the site, and the colors are now blue and white.
+>>    - Rates and policies are in: $10 loading fee plus $1.25 per mile
+>>    round trip, 72 hours' notice, full payment to book, and the 24-hour
+>>    cancellation policy. The Request a Ride page has a fare estimator.
+>>    - The service area lists your seven counties.
+>>    - Driver screening and licensing details are added. The United Way
+>>    VAN mention is removed.
+>>    - Reviews link to your Google page instead of quotes on the site.
+>>    - There is a new How to Pay page for private-pay riders. It is built,
+>>    but it can't show payment options until I have your details (question=
+s 1
+>>    and 2).
+>>
+>> Here is the payment flow I have in mind. If it doesn't match how you run
+>> things, tell me and I'll change it.
+>>
+>>    1. A rider opens Request a Ride, or calls you. The page has a fare
+>>    estimator so they can see roughly what the trip will cost.
+>>    2. They fill out the form with their name, phone number, pickup and
+>>    destination, date and time, and how they plan to pay. The form does n=
+ot
+>>    collect payment or insurance details.
+>>    3. The request goes to your Supervisor and Office Manager, who call
+>>    the rider to confirm the trip and the total. Rides must be requested =
+at
+>>    least 72 hours ahead.
+>>    4. Once the total is confirmed, your office points the rider to the
+>>    How to Pay page, and they send full payment by Zelle, Cash App, or ca=
+rd
+>>    through Square, with their name and ride date in the note.
+>>    5. Your office sees the payment come in and confirms the ride.
+>>
+>> One note: the request form isn't connected yet, so test submissions won'=
+t
+>> reach anyone. I'll set that up once I have the address in question 5.
+>> Here is what I still need from you. Questions 1 to 5 are the ones holdin=
+g
+>> things up.
+>> Payment
+>>
+>>    1. Your Zelle email or phone number, and your Cash App $cashtag.
+>>    These will be public on the site. If you can, use business accounts s=
+o
+>>    rider payments stay separate from your personal money.
+>>    2. Your Square payment link, once the account is set up. It lets
+>>    riders pay by card without an app, which helps riders who don't use Z=
+elle
+>>    or Cash App.
+>>
+>> Service area
+>>
+>>    3. You mentioned that a lot of your cash riders are going from
+>>    Orangeburg to Aiken. Aiken County isn't on the site right now. Do you=
+ want
+>>    it added, and as a pickup area, a destination, or both? Are there oth=
+er
+>>    places outside the seven counties you go to regularly?
+>>    4. Which two states besides South Carolina are you licensed to
+>>    operate in?
+>>
+>> Ride requests
+>>
+>>    5. What email address or addresses should new ride requests go to
+>>    (your Supervisor and Office Manager)?
+>>    6. How quickly should a rider expect a response after submitting a
+>>    request?
+>>    7. After you confirm a ride by phone, how long does the rider have to
+>>    send payment before the booking is dropped?
+>>    8. How will the 25% cancellation reimbursement be sent back to the
+>>    rider, and who handles it?
+>>    9. Riders with insurance choose "please have someone call me" on the
+>>    form. Is that how you want those handled?
+>>
+>> Business details
+>>
+>>    10. Should the Cassatt mailing address show on the site, or only the
+>>    Camden address?
+>>    11. What kinds of appointments do you take riders to (dialysis,
+>>    therapy, specialists, other)?
+>>    12. What year did One Carolina Transit start, if you'd like that
+>>    shown?
+>>
+>> Logo and photos
+>>
+>>    13. Do you have a logo file? If not, let me know and we'll figure out
+>>    the next step.
+>>    14. Please send any photos you have of your vehicles, drivers, and
+>>    office. Clear phone photos work fine.
+>>
+>> Once I have these, I'll make the final updates and send the site back to
+>> you for approval.
+>> Thank you,
+>> Jaylen
+>> ------------------------------
+>> *From:* Corey Sweetenburg <carolinatransit03@gmail.com>
+>> *Sent:* Monday, September 28, 2026 9:23 AM
+>> *To:* Jaylen Love <mjaylove22@outlook.com>
+>> *Subject:* Re: One Carolina Website Questions
+>>
+>> Hi Jaylen
+>>
+>> Here is the requested business information for One Carolina Transit, LLC=
+:
+>>
+>> Business Information
+>>
+>>   - Business Name: One Carolina Transit, LLC
+>>   - Title: Owner, Chief Executive Officer
+>>   - Phone Number: 803-549-8920 <(803)%20549-8920> (for appointments)
+>>   - Mailing Address: 1832 Red Hill Church Rd, Cassatt, SC 29032
+>> <https://www.google.com/maps/search/1832+Red+Hill+Church+Rd,+Cassatt,+SC=
++29032?entry=3Dgmail&source=3Dg>
+>>   - Physical Address: 402-H Dicey Ford Rd, Camden, SC 29020
+>> <https://www.google.com/maps/search/Dicey+Ford+Rd,+Camden,+SC+29020?entr=
+y=3Dgmail&source=3Dg>
+>>   - Hours of Operation: 6:00 AM =E2=80=93 6:00 PM
+>>
+>> Services & Policies
+>>
+>>   - Services Provided: Ambulatory and wheelchair transportation.
+>>   - Insurance & Private Pay: Primarily serves private-pay clients (those
+>> without insurance or who have exhausted their insurance benefits). Clien=
+ts
+>> with insurance should contact the dispatcher or their broker to arrange
+>> coverage.
+>>   - Booking Notice: Rides must be requested at least 72 hours in advance=
+.
+>> Full payment is required to complete the booking.
+>>   - Cancellation Policy: Cancellations made at least 24 hours prior to
+>> the appointment will receive a 25% reimbursement of the trip cost.
+>>   - Rescheduling Policy: Trips must be rebooked at least 72 hours in
+>> advance.
+>>
+>> Rates & Payment
+>>
+>>   - Pricing: $10.00 loading fee plus $1.25 per mile (round trip).
+>>   - Payment Methods: Zelle, Cash App, and Square (pending setup).
+>>
+>> Service Area
+>>
+>>   - Current Coverage: South Carolina (specifically Kershaw, Richland,
+>> Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties). We are
+>> licensed to operate across three states as needed.
+>>
+>> Credibility & Licensing
+>>
+>>   - Driver Vetting: All drivers undergo national/federal criminal
+>> background checks, sex offender registry checks, 10-panel drug screens, =
+and
+>> 10-year driving record reviews. Drivers are CPR-certified and trained in
+>> defensive driving and wheelchair assistance.
+>>   - Licensing: Licensed with the Office of Regulatory Staff (ORS) and
+>> Public Service Commission (PSC Certification #9156-A). Note: Not associa=
+ted
+>> with the VANS program.
+>>   - Testimonials & Media: Customer reviews are available on Google under
+>> "One Carolina Transit." Company colors are blue and white; photos of sta=
+ff,
+>> vehicles, and facilities are available upon request.
+>>
+>> Ride Request Operations
+>>
+>>   - Ride requests are monitored and managed by the Supervisor and Office
+>> Manager.
+>>
+>> Please let me know if you need any additional details.
+>>
+>> Best regards,
+>>
+>> *Corey D. Sweetenburg*
+>> *Owner, Chief Executive Officer*
+>> *Email **carolinatrasnsit03@gmail.com* <carolinatrasnsit03@gmail.com>
+>> *Phone 1-803-549-4946 <(803)%20549-4946>*
+>> *Alt Phone 1-803-549-8920 <(803)%20549-8920>*
+>> *Fax# 1-803-677-1674 <(803)%20677-1674>*
+>>
+>>
+>> On Sun, Aug 9, 2026 at 3:24=E2=80=AFPM Corey Sweetenburg <
+>> carolinatransit03@gmail.com> wrote:
+>>
+>> Jaylen,
+>> You are a real professional at your craft and once  you have me
+>> complete,I only say that because I want them to be able to view a comple=
+te
+>> product. I will distribute your contact information, Im working on the
+>> questions now, as soon as I compile the information I will send it to yo=
+u.
+>>
+>>
+>> Sincerely,
+>>
+>> *One Carolina Transit, LLC*
+>> *Corey D. Sweetenburg*
+>> *Owner, Chief Executive Officer*
+>> *Email **carolinatrasnsit03@gmail.com* <carolinatrasnsit03@gmail.com>
+>> *Phone **1-803-549-4946* <(803)%20549-4946>
+>> *Alt Phone **1-803-549-8920* <(803)%20549-8920>
+>> *Fax# **1-803-677-1674* <(803)%20677-1674>
+>>
+>>
+>> On Sun, Aug 9, 2026 at 2:53=E2=80=AFPM Jaylen Love <MJayLove22@outlook.c=
+om>
+>> wrote:
+>>
 >> Mr. Sweetenburg,
 >> Thank you for taking the time to look over the website prototype. I
 >> really appreciate the feedback, and I=E2=80=99m glad you liked the direc=
@@ -392,301 +583,662 @@ d of
 >>
 >>
 
---000000000000da5f68065c8af9a5
+--0000000000002e718b065cc6fc29
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
-iv dir=3D"ltr">Hi Jaylen<br><br>Here is the requested business information =
-for One Carolina Transit, LLC:<br><br>Business Information<br><br>&nbsp; - =
-Business Name: One Carolina Transit, LLC<br>&nbsp; - Title: Owner, Chief Ex=
-ecutive Officer<br>&nbsp; - Phone Number: 803-549-8920 (for appointments)<b=
-r>&nbsp; - Mailing Address: 1832 Red Hill Church Rd, Cassatt, SC 29032<br>&=
-nbsp; - Physical Address: 402-H Dicey Ford Rd, Camden, SC 29020<br>&nbsp; -=
- Hours of Operation: 6:00 AM =E2=80=93 6:00 PM<br><br>Services &amp; Polici=
-es<br><br>&nbsp; - Services Provided: Ambulatory and wheelchair transportat=
-ion.<br>&nbsp; - Insurance &amp; Private Pay: Primarily serves private-pay =
-clients (those without insurance or who have exhausted their insurance bene=
-fits). Clients with insurance should contact the dispatcher or their broker=
- to arrange coverage.<br>&nbsp; - Booking Notice: Rides must be requested a=
-t least 72 hours in advance. Full payment is required to complete the booki=
-ng.<br>&nbsp; - Cancellation Policy: Cancellations made at least 24 hours p=
-rior to the appointment will receive a 25% reimbursement of the trip cost.<=
-br>&nbsp; - Rescheduling Policy: Trips must be rebooked at least 72 hours i=
-n advance.<br><br>Rates &amp; Payment<br><br>&nbsp; - Pricing: $10.00 loadi=
-ng fee plus $1.25 per mile (round trip).<br>&nbsp; - Payment Methods: Zelle=
-, Cash App, and Square (pending setup).<br><br>Service Area<br><br>&nbsp; -=
- Current Coverage: South Carolina (specifically Kershaw, Richland, Lexingto=
-n, Sumter, Orangeburg, Bamberg, and Lancaster counties). We are licensed to=
- operate across three states as needed.<br><br>Credibility &amp; Licensing<=
-br><br>&nbsp; - Driver Vetting: All drivers undergo national/federal crimin=
-al background checks, sex offender registry checks, 10-panel drug screens, =
-and 10-year driving record reviews. Drivers are CPR-certified and trained i=
-n defensive driving and wheelchair assistance.<br>&nbsp; - Licensing: Licen=
-sed with the Office of Regulatory Staff (ORS) and Public Service Commission=
- (PSC Certification #9156-A). Note: Not associated with the VANS program.<b=
-r>&nbsp; - Testimonials &amp; Media: Customer reviews are available on Goog=
-le under &quot;One Carolina Transit.&quot; Company colors are blue and whit=
-e; photos of staff, vehicles, and facilities are available upon request.<br=
-><br>Ride Request Operations<br><br>&nbsp; - Ride requests are monitored an=
-d managed by the Supervisor and Office Manager.<br><br>Please let me know i=
-f you need any additional details.<br><br>Best regards,<br><br><div><div di=
+iv dir=3D"ltr">Good morning Jaylen,<br><br>Here are the additional details =
+and updates needed:<br><br>1.&nbsp; Contact Information:<br>&nbsp; &nbsp; &=
+nbsp; - Supervisor: Crystal Ray (<a href=3D"mailto:carolinatransit04@gmail.=
+com">carolinatransit04@gmail.com</a>)<br>&nbsp; &nbsp; &nbsp; - Office Mana=
+ger: Florene Davis (<a href=3D"mailto:carolinatransit06@gmail.com">carolina=
+transit06@gmail.com</a>)<br>2.&nbsp; Booking &amp; Payment: Clients will re=
+ceive a response regarding trip approval within 12 hours, at which point pa=
+yment can be made.<br>3.&nbsp; Cancellation Policy: Clients have up to 24 h=
+ours to cancel their appointment after approval.&nbsp; Refunds will be issu=
+ed through the original payment method.<br>4.&nbsp; Insurance Inquiries: Cl=
+ients using insurance should contact Office Manager Florene Davis at 803-54=
+9-8920.<br>5.&nbsp; Business Details:<br>&nbsp; &nbsp; &nbsp; - Address: Di=
+splay the Camden address only.<br>&nbsp; &nbsp; &nbsp; - Established: March=
+ 2016<br>&nbsp; &nbsp; &nbsp; - Logo: No logo file available.<br>6.&nbsp; S=
+ervices Provided: Trips cover a variety of needs, including medical appoint=
+ments, dialysis, physical therapy, specialist visits, grocery runs, work tr=
+ansportation, and airport trips.<br>7.&nbsp; Coverage Area: Additional area=
+s include Aiken, Lee, and Chesterfield, with more to be added as needed.<br=
+>8.&nbsp; Pricing: Please increase the rate to $1.85 per mile.<br><br>(Note=
+: I will likely be setting up a separate bank account for this for tax fili=
+ng purposes.)<br><br>Best regards,<br>Corey Sweetenburg<br><br><div><div di=
 r=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div=
  dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D=
-"ltr"><font face=3D"georgia, serif"><b><i>Corey D. Sweetenburg</i></b></fon=
-t></div><div><font face=3D"georgia, serif"><b><i>Owner, Chief Executive Off=
-icer</i></b></font></div><div><font face=3D"georgia, serif"><b><i>Email </i=
-><a href=3D"mailto:carolinatrasnsit03@gmail.com" target=3D"_blank">carolina=
-trasnsit03@gmail.com</a></b></font></div><div><font face=3D"georgia, serif"=
-><b><i>Phone 1-803-549-4946</i></b></font></div><div><font face=3D"georgia,=
- serif"><b><i>Alt Phone 1-803-549-8920</i></b></font></div><div><b><i><font=
- face=3D"georgia,serif">Fax# 1-803-677-1674</font></i></b><br></div></div><=
-/div></div></div></div></div><br></div><br><div class=3D"gmail_quote gmail_=
-quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Sun, Aug 9, 2026 =
-at 3:24=E2=80=AFPM Corey Sweetenburg &lt;<a href=3D"mailto:carolinatransit0=
-3@gmail.com">carolinatransit03@gmail.com</a>&gt; wrote:<br></div><blockquot=
-e class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px s=
-olid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Jaylen,</div>=
-<div>You are a real professional at your craft and once&nbsp; you have me c=
-omplete,I only say that because I want them to be able to view a complete p=
-roduct. I will distribute your contact&nbsp;information, Im working on the =
-questions now, as soon as I compile the information I will send it to you.<=
-/div><div><br></div><div><br></div><div>Sincerely,</div><div><br></div><div=
-><div dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"lt=
-r"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><font face=3D"georgia=
-, serif"><b><i>One Carolina Transit, LLC</i></b></font></div><div dir=3D"lt=
-r"><font face=3D"georgia, serif"><b><i>Corey D. Sweetenburg</i></b></font><=
-/div><div><font face=3D"georgia, serif"><b><i>Owner, Chief Executive Office=
-r</i></b></font></div><div><font face=3D"georgia, serif"><b><i>Email </i><a=
- href=3D"mailto:carolinatrasnsit03@gmail.com" target=3D"_blank">carolinatra=
-snsit03@gmail.com</a></b></font></div><div><font face=3D"georgia, serif"><b=
-><i>Phone <a href=3D"tel:(803)%20549-4946" value=3D"+18035494946" target=3D=
-"_blank">1-803-549-4946</a></i></b></font></div><div><font face=3D"georgia,=
- serif"><b><i>Alt Phone <a href=3D"tel:(803)%20549-8920" value=3D"+18035498=
-920" target=3D"_blank">1-803-549-8920</a></i></b></font></div><div><b><i><f=
-ont face=3D"georgia,serif">Fax# <a href=3D"tel:(803)%20677-1674" value=3D"+=
-18036771674" target=3D"_blank">1-803-677-1674</a></font></i></b><br></div><=
-/div></div></div></div></div></div><br></div><br><div class=3D"gmail_quote"=
-><div dir=3D"ltr" class=3D"gmail_attr">On Sun, Aug 9, 2026 at 2:53=E2=80=AF=
-PM Jaylen Love &lt;<a href=3D"mailto:MJayLove22@outlook.com" target=3D"_bla=
-nk">MJayLove22@outlook.com</a>&gt; wrote:<br></div><blockquote class=3D"gma=
-il_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,2=
-04,204);padding-left:1ex"><div>
+"ltr"><font face=3D"georgia, serif"><b><i>One Carolina Transit, LLC</i></b>=
+</font></div><div dir=3D"ltr"><font face=3D"georgia, serif"><b><i>Corey D. =
+Sweetenburg</i></b></font></div><div><font face=3D"georgia, serif"><b><i>Ow=
+ner, Chief Executive Officer</i></b></font></div><div><font face=3D"georgia=
+, serif"><b><i>Email </i><a href=3D"mailto:carolinatrasnsit03@gmail.com" ta=
+rget=3D"_blank">carolinatrasnsit03@gmail.com</a></b></font></div><div><font=
+ face=3D"georgia, serif"><b><i>Phone 1-803-549-4946</i></b></font></div><di=
+v><font face=3D"georgia, serif"><b><i>Alt Phone 1-803-549-8920</i></b></fon=
+t></div><div><b><i><font face=3D"georgia,serif">Fax# 1-803-677-1674</font><=
+/i></b><br></div></div></div></div></div></div></div><br></div><br><div cla=
+ss=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_at=
+tr">On Wed, Sep 30, 2026 at 8:58=E2=80=AFAM Corey Sweetenburg &lt;<a href=
+=3D"mailto:carolinatransit03@gmail.com">carolinatransit03@gmail.com</a>&gt;=
+ wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px =
+0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div><di=
+v dir=3D"ltr"><div>Jaylen,</div><div><br></div><div>Man I can't express to =
+you how this is a game changer&nbsp;and I truly appreciate this, THANK YOU!=
+!!!</div><div>I have a couple changes that I want to make, we will charge o=
+ur regular rate of 1.85 per mile, that's our current rate</div><div>How wil=
+l the Supervisor and Office manager receive the trip,&nbsp;</div></div></di=
+v><div><div>&nbsp;</div><div><div dir=3D"ltr" class=3D"gmail_signature"><di=
+v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><font face=3D"georgia, serif"><b><i>One Carolina Transit, LLC</i><=
+/b></font></div><div dir=3D"ltr"><font face=3D"georgia, serif"><b><i>Corey =
+D. Sweetenburg</i></b></font></div><div><font face=3D"georgia, serif"><b><i=
+>Owner, Chief Executive Officer</i></b></font></div><div><font face=3D"geor=
+gia, serif"><b><i>Email </i><a href=3D"mailto:carolinatrasnsit03@gmail.com"=
+ target=3D"_blank">carolinatrasnsit03@gmail.com</a></b></font></div><div><f=
+ont face=3D"georgia, serif"><b><i>Phone <a href=3D"tel:(803)%20549-4946" va=
+lue=3D"+18035494946" target=3D"_blank">1-803-549-4946</a></i></b></font></d=
+iv><div><font face=3D"georgia, serif"><b><i>Alt Phone <a href=3D"tel:(803)%=
+20549-8920" value=3D"+18035498920" target=3D"_blank">1-803-549-8920</a></i>=
+</b></font></div><div><b><i><font face=3D"georgia,serif">Fax# <a href=3D"te=
+l:(803)%20677-1674" value=3D"+18036771674" target=3D"_blank">1-803-677-1674=
+</a></font></i></b><br></div></div></div></div></div></div></div><br></div>=
+<div></div><div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gm=
+ail_attr">On Tue, Sep 29, 2026 at 11:05=E2=80=AFPM Jaylen Love &lt;<a href=
+=3D"mailto:MJayLove22@outlook.com" target=3D"_blank">MJayLove22@outlook.com=
+</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:=
+0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">=
+<div>
 
 
 
 
 <div dir=3D"ltr">
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 Mr. Sweetenburg,</div>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Thank you for sending the business information. I've added it to the site, =
+and you can review the updated version here:</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<a href=3D"https://mjaylove22.github.io/onecarolina-demo/index.html" target=
+=3D"_blank">https://mjaylove22.github.io/onecarolina-demo/index.html</a></d=
+iv>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<span style=3D"background-color:rgb(0,255,0)">What changed:</span></div>
+<ul>
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Your phone number, address, hours, and PSC certi=
+fication number are on the site, and the colors are now blue and white.</di=
+v>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Rates and policies are in: $10 loading fee plus =
+$1.25 per mile round trip, 72 hours' notice, full payment to book, and the =
+24-hour cancellation policy. The Request a Ride page has a fare estimator.<=
+/div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">The service area lists your seven counties.</div=
+>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Driver screening and licensing details are added=
+. The United Way VAN mention is removed.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Reviews link to your Google page instead of quot=
+es on the site.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">There is a new How to Pay page for private-pay r=
+iders. It is built, but it can't show payment options until I have your det=
+ails (questions 1 and 2).</div>
+</li></ul>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<span style=3D"background-color:rgb(255,128,255)">Here is the payment flow =
+I have in mind. If it doesn't match how you run things, tell me and I'll ch=
+ange it.</span></div>
+<ol start=3D"1">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">A rider opens Request a Ride, or calls you. The =
+page has a fare estimator so they can see roughly what the trip will cost.<=
+/div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">They fill out the form with their name, phone nu=
+mber, pickup and destination, date and time, and how they plan to pay. The =
+form does not collect payment or insurance details.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">The request goes to your Supervisor and Office M=
+anager, who call the rider to confirm the trip and the total. Rides must be=
+ requested at least 72 hours ahead.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Once the total is confirmed, your office points =
+the rider to the How to Pay page, and they send full payment by Zelle, Cash=
+ App, or card through Square, with their name and ride date in the note.</d=
+iv>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Your office sees the payment come in and confirm=
+s the ride.</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+One note: the request form isn't connected yet, so test submissions won't r=
+each anyone. I'll set that up once I have the address in question 5.</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<span style=3D"background-color:rgb(255,255,0)">Here is what I still need f=
+rom you. Questions 1 to 5 are the ones holding things up.</span></div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Payment</div>
+<ol start=3D"1">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Your Zelle email or phone number, and your Cash =
+App $cashtag. These will be public on the site. If you can, use business ac=
+counts so rider payments stay separate from your personal money.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Your Square payment link, once the account is se=
+t up. It lets riders pay by card without an app, which helps riders who don=
+'t use Zelle or Cash App.</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Service area</div>
+<ol start=3D"3">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">You mentioned that a lot of your cash riders are=
+ going from Orangeburg to Aiken. Aiken County isn't on the site right now. =
+Do you want it added, and as a pickup area, a destination, or both? Are the=
+re other places outside the seven
+ counties you go to regularly?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Which two states besides South Carolina are you =
+licensed to operate in?</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Ride requests</div>
+<ol start=3D"5">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">What email address or addresses should new ride =
+requests go to (your Supervisor and Office Manager)?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">How quickly should a rider expect a response aft=
+er submitting a request?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">After you confirm a ride by phone, how long does=
+ the rider have to send payment before the booking is dropped?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">How will the 25% cancellation reimbursement be s=
+ent back to the rider, and who handles it?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Riders with insurance choose &quot;please have s=
+omeone call me&quot; on the form. Is that how you want those handled?</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Business details</div>
+<ol start=3D"10">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Should the Cassatt mailing address show on the s=
+ite, or only the Camden address?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">What kinds of appointments do you take riders to=
+ (dialysis, therapy, specialists, other)?</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">What year did One Carolina Transit start, if you=
+'d like that shown?</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Logo and photos</div>
+<ol start=3D"13">
+<li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
+ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Do you have a logo file? If not, let me know and=
+ we'll figure out the next step.</div>
+</li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
+Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div role=3D"presentation">Please send any photos you have of your vehicles=
+, drivers, and office. Clear phone photos work fine.</div>
+</li></ol>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Once I have these, I'll make the final updates and send the site back to yo=
+u for approval.</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Thank you,</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Jaylen<span style=3D"font-family:Calibri,Arial,Helvetica,sans-serif"><br>
+</span></div>
+<hr style=3D"display:inline-block;width:98%">
+<div style=3D"font-family:Calibri,Arial,Helvetica,sans-serif;font-size:12pt=
+;color:rgb(0,0,0)">
+<b>From:</b> Corey Sweetenburg &lt;<a href=3D"mailto:carolinatransit03@gmai=
+l.com" target=3D"_blank">carolinatransit03@gmail.com</a>&gt;<br>
+<b>Sent:</b> Monday, September 28, 2026 9:23 AM<br>
+<b>To:</b> Jaylen Love &lt;<a href=3D"mailto:mjaylove22@outlook.com" target=
+=3D"_blank">mjaylove22@outlook.com</a>&gt;<br>
+<b>Subject:</b> Re: One Carolina Website Questions </div>
+<div style=3D"font-family:Calibri,Arial,Helvetica,sans-serif;font-size:12pt=
+;color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"direction:ltr">Hi Jaylen<br>
+<br>
+Here is the requested business information for One Carolina Transit, LLC:<b=
+r>
+<br>
+Business Information<br>
+<br>
+&nbsp; - Business Name: One Carolina Transit, LLC<br>
+&nbsp; - Title: Owner, Chief Executive Officer<br>
+&nbsp; - Phone Number: <a href=3D"tel:(803)%20549-8920" value=3D"+180354989=
+20" target=3D"_blank">803-549-8920</a> (for appointments)<br>
+&nbsp; - Mailing Address: <a href=3D"https://www.google.com/maps/search/183=
+2+Red+Hill+Church+Rd,+Cassatt,+SC+29032?entry=3Dgmail&amp;source=3Dg" targe=
+t=3D"_blank">1832 Red Hill Church Rd, Cassatt, SC 29032</a><br>
+&nbsp; - Physical Address: 402-H <a href=3D"https://www.google.com/maps/sea=
+rch/Dicey+Ford+Rd,+Camden,+SC+29020?entry=3Dgmail&amp;source=3Dg" target=3D=
+"_blank">Dicey Ford Rd, Camden, SC 29020</a><br>
+&nbsp; - Hours of Operation: 6:00 AM =E2=80=93 6:00 PM<br>
+<br>
+Services &amp; Policies<br>
+<br>
+&nbsp; - Services Provided: Ambulatory and wheelchair transportation.<br>
+&nbsp; - Insurance &amp; Private Pay: Primarily serves private-pay clients =
+(those without insurance or who have exhausted their insurance benefits). C=
+lients with insurance should contact the dispatcher or their broker to arra=
+nge coverage.<br>
+&nbsp; - Booking Notice: Rides must be requested at least 72 hours in advan=
+ce. Full payment is required to complete the booking.<br>
+&nbsp; - Cancellation Policy: Cancellations made at least 24 hours prior to=
+ the appointment will receive a 25% reimbursement of the trip cost.<br>
+&nbsp; - Rescheduling Policy: Trips must be rebooked at least 72 hours in a=
+dvance.<br>
+<br>
+Rates &amp; Payment<br>
+<br>
+&nbsp; - Pricing: $10.00 loading fee plus $1.25 per mile (round trip).<br>
+&nbsp; - Payment Methods: Zelle, Cash App, and Square (pending setup).<br>
+<br>
+Service Area<br>
+<br>
+&nbsp; - Current Coverage: South Carolina (specifically Kershaw, Richland, =
+Lexington, Sumter, Orangeburg, Bamberg, and Lancaster counties). We are lic=
+ensed to operate across three states as needed.<br>
+<br>
+Credibility &amp; Licensing<br>
+<br>
+&nbsp; - Driver Vetting: All drivers undergo national/federal criminal back=
+ground checks, sex offender registry checks, 10-panel drug screens, and 10-=
+year driving record reviews. Drivers are CPR-certified and trained in defen=
+sive driving and wheelchair assistance.<br>
+&nbsp; - Licensing: Licensed with the Office of Regulatory Staff (ORS) and =
+Public Service Commission (PSC Certification #9156-A). Note: Not associated=
+ with the VANS program.<br>
+&nbsp; - Testimonials &amp; Media: Customer reviews are available on Google=
+ under &quot;One Carolina Transit.&quot; Company colors are blue and white;=
+ photos of staff, vehicles, and facilities are available upon request.<br>
+<br>
+Ride Request Operations<br>
+<br>
+&nbsp; - Ride requests are monitored and managed by the Supervisor and Offi=
+ce Manager.<br>
+<br>
+Please let me know if you need any additional details.<br>
+<br>
+Best regards,<br>
+<br>
+</div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Corey D. Sweet=
+enburg</i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Owner, Chief E=
+xecutive Officer</i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Email </i></b>=
+<a href=3D"mailto:carolinatrasnsit03@gmail.com" id=3D"m_-110004141766692349=
+5m_4086603879554455843m_2427122985519985923OWA7a59283e-a382-35cf-318a-7dfbe=
+6995f72" target=3D"_blank"><b>carolinatrasnsit03@gmail.com</b></a></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Phone <a href=
+=3D"tel:(803)%20549-4946" value=3D"+18035494946" target=3D"_blank">1-803-54=
+9-4946</a></i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Alt Phone <a h=
+ref=3D"tel:(803)%20549-8920" value=3D"+18035498920" target=3D"_blank">1-803=
+-549-8920</a></i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Fax# <a href=
+=3D"tel:(803)%20677-1674" value=3D"+18036771674" target=3D"_blank">1-803-67=
+7-1674</a></i></b></div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div><br>
+</div>
+<div style=3D"direction:ltr">On Sun, Aug 9, 2026 at 3:24=E2=80=AFPM Corey S=
+weetenburg &lt;<a href=3D"mailto:carolinatransit03@gmail.com" id=3D"m_-1100=
+041417666923495m_4086603879554455843m_2427122985519985923OWA1c99bee9-284f-9=
+a24-a3ce-ea813c867935" target=3D"_blank">carolinatransit03@gmail.com</a>&gt=
+; wrote:</div>
+<blockquote style=3D"margin:0px 0px 0px 0.8ex;padding-left:1ex;border-left:=
+1px solid rgb(204,204,204)">
+<div style=3D"direction:ltr">Jaylen,</div>
+<div style=3D"direction:ltr">You are a real professional at your craft and =
+once&nbsp; you have me complete,I only say that because I want them to be a=
+ble to view a complete product. I will distribute your contact&nbsp;informa=
+tion, Im working on the questions now, as
+ soon as I compile the information I will send it to you.</div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div style=3D"direction:ltr">Sincerely,</div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>One Carolina T=
+ransit, LLC</i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Corey D. Sweet=
+enburg</i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Owner, Chief E=
+xecutive Officer</i></b></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Email </i></b>=
+<a href=3D"mailto:carolinatrasnsit03@gmail.com" id=3D"m_-110004141766692349=
+5m_4086603879554455843m_2427122985519985923OWAd1f2a3d2-0457-0edf-a7ce-8b525=
+8a86384" target=3D"_blank"><b>carolinatrasnsit03@gmail.com</b></a></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Phone </i></b>=
+<a href=3D"tel:(803)%20549-4946" id=3D"m_-1100041417666923495m_408660387955=
+4455843m_2427122985519985923OWAda77b784-ebaa-66b7-cf9f-b12e8bafc1ce" target=
+=3D"_blank"><b><i>1-803-549-4946</i></b></a></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Alt Phone </i>=
+</b><a href=3D"tel:(803)%20549-8920" id=3D"m_-1100041417666923495m_40866038=
+79554455843m_2427122985519985923OWAb3c4f50a-4921-8f43-f32d-421ea163658d" ta=
+rget=3D"_blank"><b><i>1-803-549-8920</i></b></a></div>
+<div style=3D"direction:ltr;font-family:georgia,serif"><b><i>Fax# </i></b><=
+a href=3D"tel:(803)%20677-1674" id=3D"m_-1100041417666923495m_4086603879554=
+455843m_2427122985519985923OWA2b5f6d1a-93b6-56d9-26db-7589befb817d" target=
+=3D"_blank"><b><i>1-803-677-1674</i></b></a></div>
+<div style=3D"direction:ltr"><br>
+</div>
+<div><br>
+</div>
+<div style=3D"direction:ltr">On Sun, Aug 9, 2026 at 2:53=E2=80=AFPM Jaylen =
+Love &lt;<a href=3D"mailto:MJayLove22@outlook.com" id=3D"m_-110004141766692=
+3495m_4086603879554455843m_2427122985519985923OWAb016c72a-7c87-5991-08ae-93=
+553956a7d8" target=3D"_blank">MJayLove22@outlook.com</a>&gt; wrote:</div>
+<blockquote style=3D"margin:0px 0px 0px 0.8ex;padding-left:1ex;border-left:=
+1px solid rgb(204,204,204)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
+Mr. Sweetenburg,</div>
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 Thank you for taking the time to look over the website prototype. I really =
 appreciate the feedback, and I=E2=80=99m glad you liked the direction of it=
 .</div>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 To make sure the finished website accurately represents One Carolina Transi=
 t and how you operate, I just need some additional information from you. On=
 ce I have these answers, I can make the necessary updates, send the site ba=
 ck to you for final approval, and
  then move forward with getting it launched.</div>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 There are quite a few questions below, so no rush =E2=80=94 take your time =
 and answer them whenever it=E2=80=99s convenient.</div>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Business Information</b></div>
-<ol start=3D"1">
+<ol start=3D"1" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What is the official business name you would like displayed =E2=80=94 <b>On=
 e Carolina Transit</b> or
 <b>One Carolina Transport</b>?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What title would you like displayed for yourself =E2=80=94 Owner, CEO, Owne=
 r/President, etc.?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What phone number should be listed on the website?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What business address should be listed?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What are your normal hours of operation (days and times)?</div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Services</b></div>
-<ol start=3D"6">
+<ol start=3D"6" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What services do you currently offer? (Ambulatory, wheelchair transportatio=
 n, dialysis, long-distance trips, errands, etc.)</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What insurance programs do you accept? (Medicaid, Medicare, others?)</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 How much advance notice do you typically require for a booking?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you have a cancellation or rescheduling policy?</div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Private-Pay / Cash Clients</b></div>
-<ol start=3D"10">
+<ol start=3D"10" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you accept private-pay clients who are not using insurance?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 How is private-pay pricing determined =E2=80=94 flat rate, per mile, per tr=
 ip, zones, or something else?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What payment methods do you accept? (Cash, card, Cash App, Venmo, invoice, =
 etc.)</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Is a deposit or prepayment required for private-pay bookings?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do private-pay clients follow the same booking process and lead time as ins=
 urance rides?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Is the service area the same for private-pay clients?</div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Service Area</b></div>
-<ol start=3D"16">
+<ol start=3D"16" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What towns, cities, or areas do you currently serve? The prototype currentl=
 y lists Camden and Cassatt, but I=E2=80=99d like the complete list.</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you travel outside of Kershaw County (such as Columbia), or is that hand=
 led on a case-by-case basis?</div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Trust &amp; Credibility</b></div>
-<ol start=3D"18">
+<ol start=3D"18" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 What type of driver screening, background checks, training, or certificatio=
 ns do your drivers complete?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Are you currently an active partner with United Way's Vehicle Access Networ=
 k (VAN) program? If so, are you comfortable with us mentioning that on the =
 website?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Are there any license, permit, or certification numbers you would like disp=
 layed on the site?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you have any customer testimonials that we could use on the website, wit=
 h the customers' permission?</div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Branding &amp; Photos</b></div>
-<ol start=3D"22">
+<ol start=3D"22" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you have an existing company logo that you can send me?</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you have specific brand colors you'd like the website to use, or are you=
  happy with the blue/orange color scheme currently used in the prototype?</=
 div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Do you have any photos of your actual vehicles, drivers, office, or company=
  that you'd like to use on the website instead of the placeholder images?</=
 div>
 </li></ol>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <b>Ride Requests &amp; Website Operations</b></div>
-<ol start=3D"25">
+<ol start=3D"25" style=3D"direction:ltr">
 <li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calib=
 ri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Once the ride request form is live, who will be responsible for monitoring =
 and responding to those requests? We can discuss this one together if neede=
 d, since there may be a few different ways we can set it up.</div>
 </li><li style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,=
 Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
-<div role=3D"presentation" style=3D"margin-top:1em;margin-bottom:1em">
+<div role=3D"presentation" style=3D"direction:ltr;margin-top:1em;margin-bot=
+tom:1em">
 Should the online ride request form collect insurance/payment information d=
 irectly, or would you prefer to collect that information over the phone?</d=
 iv>
 </li></ol>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 Once I have this information, I=E2=80=99ll be able to make the next round o=
 f updates and get the site much closer to the finished product.</div>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 <br>
 </div>
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 Thank you again for the opportunity to work with you. I appreciate it.</div=
 >
-<div style=3D"margin-top:1em;margin-bottom:1em;font-family:Aptos,Aptos_Embe=
-ddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;co=
-lor:rgb(0,0,0)">
+<div style=3D"direction:ltr;margin-top:1em;margin-bottom:1em;font-family:Ap=
+tos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;fon=
+t-size:12pt;color:rgb(0,0,0)">
 Jaylen</div>
-<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
-bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<div style=3D"direction:ltr;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFo=
+ntService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <br>
 </div>
+</blockquote>
+</blockquote>
 </div>
 
 </div></blockquote></div>
+</div>
 </blockquote></div>
 
---000000000000da5f68065c8af9a5--
+--0000000000002e718b065cc6fc29--
