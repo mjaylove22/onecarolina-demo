@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "One Carolina Transit",
+  "short_name": "One Carolina",
+  "description": "Request a non-emergency medical ride with One Carolina Transit in Camden, SC.",
+  "start_url": "request-a-ride.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF9F7",
+  "theme_color": "#0F2E5C",
+  "lang": "en-US",
+  "icons": [
+    { "src": "assets/images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/images/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Request a Ride", "url": "request-a-ride.html", "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }] },
+    { "name": "How to Pay", "url": "pay.html", "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

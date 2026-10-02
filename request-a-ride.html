@@ -43,6 +43,8 @@
   <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <meta name="theme-color" content="#0F2E5C">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="One Carolina">
 </head>
 
 <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
@@ -150,6 +152,18 @@
             </div>
             <p id="fare-result" class="mt-3 text-lg font-bold text-primary-900" aria-live="polite"></p>
             <p class="text-xs text-neutral-500 mt-2">Estimate only. Enter round-trip mileage from a maps app for the most accurate quote — full payment is required to complete booking.</p>
+          </div>
+
+          <!-- Home-screen app card (main.js shows the install button on Android Chrome/Edge, hides the card once installed) -->
+          <div id="install-card" class="bg-neutral-100 rounded-lg p-6 mt-6">
+            <p class="font-semibold text-primary-900 mb-1">Save us to your home screen</p>
+            <p class="text-sm text-neutral-600 mb-3">Add our icon to your phone so Request a Ride is one tap away, like an app. Nothing to download from an app store.</p>
+            <button type="button" id="install-btn"
+              class="hidden w-full min-h-[44px] bg-primary-700 hover:bg-primary-900 text-white font-semibold px-5 rounded transition-colors mb-3">
+              Add to home screen
+            </button>
+            <p id="install-steps-ios" class="text-sm text-neutral-600"><span class="font-semibold text-neutral-900">iPhone (Safari):</span> tap the Share button, then <span class="font-semibold">Add to Home Screen</span>.</p>
+            <p id="install-steps-android" class="text-sm text-neutral-600 mt-2"><span class="font-semibold text-neutral-900">Android (Chrome):</span> tap the ⋮ menu, then <span class="font-semibold">Add to Home screen</span> or <span class="font-semibold">Install app</span>.</p>
           </div>
         </div>
 
