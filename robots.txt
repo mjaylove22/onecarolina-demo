@@ -1,0 +1,5 @@
+# Allow all crawlers. Only read at the domain root, so this takes effect once the custom domain is live.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.onecarolinatransit.com/sitemap.xml

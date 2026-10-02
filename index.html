@@ -5,7 +5,6 @@
   STILL OPEN BEFORE LAUNCH (each marked inline with a TODO comment):
     - Driver / wheelchair-accessible vehicle photos (homepage now shows one real van photo)
     - Logo is done (redrawn from the van decal, approved by the owner); OG share image is done
-    - Founding year / story (not confirmed — no year is claimed on the site)
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,46 +13,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <title>One Carolina Transit | Non-Emergency Medical Transportation in South Carolina</title>
-  <meta name="description" content="Safe, reliable non-emergency medical transportation for ambulatory and wheelchair patients across Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, Lancaster, Aiken, Lee, and Chesterfield counties, SC. Private-pay welcome. Call today to book.">
+  <title>Medical Transportation in Camden, SC | One Carolina Transit</title>
+  <meta name="description" content="Non-emergency medical rides from Camden, SC: ambulatory and wheelchair-accessible transportation across 10 South Carolina counties. Call (803) 549-8920.">
   <link rel="canonical" href="https://www.onecarolinatransit.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="One Carolina Transit | Non-Emergency Medical Transportation">
-  <meta property="og:description" content="Safe, reliable rides to medical appointments for ambulatory and wheelchair patients across South Carolina.">
+  <meta property="og:title" content="Medical Transportation in Camden, SC | One Carolina Transit">
+  <meta property="og:description" content="Non-emergency medical rides from Camden, SC: ambulatory and wheelchair-accessible transportation across 10 South Carolina counties. Call (803) 549-8920.">
   <meta property="og:url" content="https://www.onecarolinatransit.com/">
   <meta property="og:image" content="https://www.onecarolinatransit.com/assets/images/og-cover.jpg"> <!-- file exists now; URL assumes the final domain -->
   <meta property="og:locale" content="en_US">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="One Carolina Transit | Non-Emergency Medical Transportation">
-  <meta name="twitter:description" content="Safe, reliable rides to medical appointments for ambulatory and wheelchair patients across South Carolina.">
+  <meta name="twitter:title" content="Medical Transportation in Camden, SC | One Carolina Transit">
+  <meta name="twitter:description" content="Non-emergency medical rides from Camden, SC: ambulatory and wheelchair-accessible transportation across 10 South Carolina counties. Call (803) 549-8920.">
+
 
   <!-- Fonts: Inter, self-hosted-preferred in production; using Google Fonts CDN for prototype -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind (CDN Play build — PROTOTYPE ONLY.
-       Production should compile Tailwind via CLI/PostCSS for real Lighthouse 95+ performance;
-       flagged again in the post-build recommendations. -->
+  <!-- Compiled Tailwind (npm run build:css) -->
   <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <link rel="stylesheet" href="assets/css/custom.css">
   <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
   <!-- Schema.org: LocalBusiness / MedicalTransportation -->
+  <!-- Business record, same @id on index.html and contact.html. TODO: add "sameAs": [Google Business Profile URL] once Corey sends it. URLs assume the final domain. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.onecarolinatransit.com/#business",
     "name": "One Carolina Transit",
+    "legalName": "One Carolina Transit, LLC",
     "description": "Non-emergency medical transportation for ambulatory and wheelchair patients in Kershaw, Richland, Lexington, Sumter, Orangeburg, Bamberg, Lancaster, Aiken, Lee, and Chesterfield counties, South Carolina.",
     "url": "https://www.onecarolinatransit.com/",
     "telephone": "+1-803-549-8920",
-    "priceRange": "$$",
+    "logo": "https://www.onecarolinatransit.com/assets/images/icon-512.png",
+    "image": [
+      "https://www.onecarolinatransit.com/assets/images/van.jpg",
+      "https://www.onecarolinatransit.com/assets/images/og-cover.jpg"
+    ],
+    "foundingDate": "2016-03",
+    "priceRange": "$10 loading fee + $1.85 per mile, round trip",
+    "paymentAccepted": "Zelle, Cash App",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "402-H Dicey Ford Rd",
@@ -63,21 +69,59 @@
       "addressCountry": "US"
     },
     "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Kershaw County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Richland County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Lexington County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Sumter County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Orangeburg County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Bamberg County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Lancaster County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Aiken County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Lee County, South Carolina" },
-      { "@type": "AdministrativeArea", "name": "Chesterfield County, South Carolina" }
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kershaw County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Richland County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Lexington County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Sumter County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Orangeburg County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bamberg County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Lancaster County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Aiken County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Lee County, South Carolina"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Chesterfield County, South Carolina"
+      }
     ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
         "opens": "06:00",
         "closes": "18:00"
       }
@@ -420,7 +464,7 @@
               </button>
             </h3>
             <div id="faq-1" class="hidden px-6 pb-5 text-neutral-600">
-              Yes — we primarily serve private-pay clients. If you have insurance, call our Office Manager at (803) 549-8920.
+              Yes — we primarily serve private-pay clients. If you have insurance, call our Office Manager, Florene Davis, at (803) 549-8920.
             </div>
           </div>
 
