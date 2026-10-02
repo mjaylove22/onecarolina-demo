@@ -4,3 +4,7 @@ node_modules/
 PROJECT-HANDOFF.md
 CLIENT-QUESTIONS.md
 DEV-NOTES.md
+CLAUDE.md
+
+# client email exports (contain private addresses)
+Emails/

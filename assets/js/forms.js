@@ -15,6 +15,7 @@
 
   function fieldLabel(form, el) {
     var text = '';
+    if (el.getAttribute('data-label')) return el.getAttribute('data-label');
     if (el.type === 'radio') {
       var legend = el.closest('fieldset') && el.closest('fieldset').querySelector('legend');
       text = legend ? legend.textContent : el.name;
@@ -23,6 +24,47 @@
       text = label ? label.textContent : el.name;
     }
     return text.replace(/\*/g, '').replace(/\(optional\)/i, '').replace(/\s+/g, ' ').trim();
+  }
+
+
+  // Friendly values for the email staff receive: "7:28 PM", "October 3, 2026", "Zelle".
+  function niceValue(el) {
+    var v = el.value.trim();
+    if (el.type === 'time' && /^\d{1,2}:\d{2}/.test(v)) {
+      var h = parseInt(v.slice(0, 2), 10), m = v.slice(3, 5);
+      return (h % 12 || 12) + ':' + m + ' ' + (h >= 12 ? 'PM' : 'AM');
+    }
+    if (el.type === 'date' && /^\d{4}-\d{2}-\d{2}$/.test(v)) {
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      return months[parseInt(v.slice(5, 7), 10) - 1] + ' ' + parseInt(v.slice(8, 10), 10) + ', ' + v.slice(0, 4);
+    }
+    if (el.tagName === 'SELECT' && el.selectedIndex >= 0) return el.options[el.selectedIndex].text.trim();
+    if (el.type === 'radio') {
+      var span = el.parentNode.querySelector('span');
+      return span ? span.textContent.trim() : v;
+    }
+    return v;
+  }
+
+  // Build what gets sent: plain-English field names instead of "appt-date" etc.
+  // Keys starting with "_" (Formspree settings) and the email field keep their names
+  // so Formspree's subject line and reply-to keep working.
+  function buildPayload(form) {
+    var data = new FormData();
+    var seen = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || el.type === 'submit' || el.type === 'button') return;
+      if (el.name.charAt(0) === '_') { data.append(el.name, el.value); return; }
+      if (el.type === 'radio') {
+        if (!el.checked || seen[el.name]) return;
+        seen[el.name] = true;
+      }
+      var value = niceValue(el);
+      if (value === '') return;
+      var key = el.type === 'email' ? el.name : fieldLabel(form, el);
+      data.append(key, value);
+    });
+    return data;
   }
 
   function showStatus(box, kind, build) {
@@ -113,7 +155,7 @@
 
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
+        body: buildPayload(form),
         headers: { 'Accept': 'application/json' },
         signal: controller ? controller.signal : undefined
       }).then(function (res) {

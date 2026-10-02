@@ -18,7 +18,8 @@ html {
   }
 }
 
-/* Scroll-reveal: elements start hidden, JS adds .is-visible via IntersectionObserver */
+/* Scroll-reveal: elements start hidden, JS adds .is-visible via IntersectionObserver.
+   Each page has a <noscript> override in <head> so content shows without JS. */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
