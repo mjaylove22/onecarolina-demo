@@ -1,12 +1,17 @@
 // One Carolina Transit — main.js
-// Vanilla JS only, no dependencies. Handles: mobile nav, scroll-reveal, FAQ accordion.
+// Vanilla JS only, no dependencies. Handles: mobile nav, scroll-reveal, FAQ accordion,
+// fare calculator, and home-screen app support (service worker + install card).
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initFaqAccordion();
   initFareCalculator();
+  initInstallCard();
 });
+
+registerServiceWorker();
+
 
 /* ---------- Mobile navigation ---------- */
 function initMobileMenu() {
@@ -110,4 +115,60 @@ function initFareCalculator() {
       calculate();
     }
   });
+}
+
+/* ---------- Home-screen app (PWA) ---------- */
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator) || !/^https?:$/.test(location.protocol)) return;
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+// Chrome/Edge on Android fire beforeinstallprompt; keep it so our button can open the install dialog.
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  showInstallButton();
+});
+
+function isInstalledApp() {
+  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+
+function showInstallButton() {
+  const btn = document.getElementById('install-btn');
+  if (btn && deferredInstallPrompt) btn.classList.remove('hidden');
+}
+
+// Card on the Request a Ride page. Without JS it shows the written steps for both phones.
+function initInstallCard() {
+  const card = document.getElementById('install-card');
+  if (!card) return;
+  if (isInstalledApp()) {
+    card.classList.add('hidden');
+    return;
+  }
+
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const ios = document.getElementById('install-steps-ios');
+  const android = document.getElementById('install-steps-android');
+  if (isIOS && android) android.classList.add('hidden');
+  if (!isIOS && /android/i.test(navigator.userAgent) && ios) ios.classList.add('hidden');
+
+  const btn = document.getElementById('install-btn');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      btn.classList.add('hidden');
+    });
+  }
+  showInstallButton();
+
+  window.addEventListener('appinstalled', () => card.classList.add('hidden'));
 }

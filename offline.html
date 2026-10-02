@@ -1,0 +1,34 @@
+<!--
+  ONE CAROLINA TRANSIT — offline fallback (served by sw.js when a page isn't saved and there's no connection)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're offline | One Carolina Transit</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0F2E5C">
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
+  <main class="min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="max-w-md w-full text-center">
+      <img src="assets/images/emblem.svg" alt="One Carolina Transit" width="52" height="43" class="h-14 w-auto mx-auto mb-6">
+      <h1 class="text-[26px] font-bold text-primary-900 mb-3">You're offline</h1>
+      <p class="text-neutral-600 text-lg mb-8">
+        This page needs a connection. To request or change a ride, give us a call. Phone calls work without internet.
+      </p>
+      <a href="tel:+18035498920" class="inline-flex justify-center items-center w-full sm:w-auto bg-accent-600 hover:bg-accent-500 text-white font-semibold text-lg px-8 py-4 rounded transition-colors">
+        Call (803) 549-8920
+      </a>
+      <p class="text-neutral-600 text-sm mt-4">Daily: 6:00 AM – 6:00 PM</p>
+      <p class="mt-8"><a href="request-a-ride.html" class="text-primary-700 font-semibold underline">Try again</a></p>
+    </div>
+  </main>
+</body>
+</html>

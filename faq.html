@@ -78,6 +78,11 @@
         "@type": "Question",
         "name": "How much does a ride cost?",
         "acceptedAnswer": { "@type": "Answer", "text": "Pricing is a $10 loading fee plus $1.85 per mile, calculated round trip. Full payment is required to complete booking, and we accept Zelle and Cash App (Square is coming soon)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I put One Carolina Transit on my phone like an app?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. On iPhone, open our website in Safari, tap the Share button, then Add to Home Screen. On Android, open it in Chrome, tap the menu, then Add to Home screen or Install app. Our icon then opens straight to Request a Ride. You still need a connection to send a request; without one, call us at (803) 549-8920." }
       }
     ]
   }
@@ -86,6 +91,8 @@
   <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <meta name="theme-color" content="#0F2E5C">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="One Carolina">
 </head>
 
 <body class="bg-neutral-50 text-neutral-900 font-sans antialiased">
@@ -241,6 +248,18 @@
             </h3>
             <div id="faq-7" class="hidden px-6 pb-5 text-neutral-600">
               Pricing is a $10 loading fee plus $1.85 per mile, calculated round trip. Full payment is required to complete booking. We accept Zelle and Cash App, with Square coming soon.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+            <h3>
+              <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left px-6 py-5 font-semibold text-neutral-900" aria-expanded="false" aria-controls="faq-8">
+                Can I put One Carolina Transit on my phone like an app?
+                <svg class="faq-chevron flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#1E4B8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div id="faq-8" class="hidden px-6 pb-5 text-neutral-600">
+              Yes. On iPhone, open our website in Safari, tap the Share button, then <strong>Add to Home Screen</strong>. On Android, open it in Chrome, tap the menu, then <strong>Add to Home screen</strong> or <strong>Install app</strong>. Our icon then opens straight to <a href="request-a-ride.html" class="text-primary-700 underline">Request a Ride</a>. You still need a connection to send a request; without one, call us at <a href="tel:+18035498920" class="text-primary-700 underline">(803) 549-8920</a>.
             </div>
           </div>
 
