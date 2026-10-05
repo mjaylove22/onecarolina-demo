@@ -9,3 +9,6 @@ MONEY-NOTES.md
 
 # client email exports (contain private addresses)
 Emails/
+
+# local dev/test scripts (Playwright smoke + PWA tests, map generator)
+.dev/
